@@ -1,15 +1,31 @@
 # Cloudflare Pages Build Configuration
 
+## ⚠️ IMPORTANT: Configure in Cloudflare Pages Dashboard
+
+Cloudflare Pages is currently trying to use Wrangler (Workers) instead of Hugo. You **MUST**
+configure the build settings in the Cloudflare Pages dashboard to fix this.
+
 ## Required Settings
 
-Configure these settings in the Cloudflare Pages dashboard:
+Go to: **Cloudflare Dashboard → Pages → Your Project → Settings → Builds & deployments**
+
+Configure these settings:
 
 ### Build Settings
 
-- **Framework preset**: Hugo
-- **Build command**: `cd hugo-site && hugo --minify`
-- **Build output directory**: `hugo-site/public`
-- **Root directory**: (leave empty - use repository root)
+1. **Framework preset**: Select **"Hugo"** (NOT Workers/Wrangler)
+2. **Build command**: `cd hugo-site && hugo --minify`
+3. **Build output directory**: `hugo-site/public`
+4. **Root directory**: (leave empty - use repository root)
+
+### Environment Variables
+
+No environment variables required for basic builds.
+
+### Hugo Version
+
+Cloudflare Pages will automatically detect and use Hugo Extended when Framework preset is set to
+Hugo.
 
 ### Environment Variables
 

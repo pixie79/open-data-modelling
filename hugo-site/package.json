@@ -16,14 +16,14 @@
     "clean": "rm -rf public"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.8.0",
-    "eslint": "^8.57.0",
-    "htmlhint": "^1.1.4",
-    "markdownlint-cli2": "^0.11.0",
-    "prettier": "^3.2.5",
-    "stylelint": "^16.2.1",
-    "stylelint-config-standard": "^36.0.1",
-    "stylelint-config-standard-scss": "^13.1.0"
+    "@axe-core/cli": "^4.11.0",
+    "eslint": "^9.39.2",
+    "htmlhint": "^1.8.0",
+    "markdownlint-cli2": "^0.20.0",
+    "prettier": "^3.7.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-config-standard-scss": "^16.0.0"
   },
   "engines": {
     "node": ">=18.0.0",

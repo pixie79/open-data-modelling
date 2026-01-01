@@ -198,8 +198,6 @@ Export to standard formats:
 ## Related Resources
 
 - [Import Guide](/guides/import/) - Learn how to import contracts
-- [ODCS Documentation](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="\_blank"
-  rel="noopener noreferrer"} - Standard format documentation
-- [ODPS Documentation](https://bitol-io.github.io/open-data-product-standard){:target="\_blank"
-  rel="noopener noreferrer"} - Open Data Product Standard
+- <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">ODCS Documentation</a> - Standard format documentation
+- <a href="https://bitol-io.github.io/open-data-product-standard" target="_blank" rel="noopener noreferrer">ODPS Documentation</a> - Open Data Product Standard
 - [Data Contracts](/data-contracts/) - Understanding data contracts

@@ -65,7 +65,7 @@ sign up for cloud storage and collaboration.
 
 For detailed documentation, user guides, and API reference, visit the frontend repository:
 
-**[Data Modelling Frontend on GitHub →](https://github.com/pixie79/data-modelling-frontend){:target="\_blank" rel="noopener noreferrer"}**
+**<a href="https://github.com/pixie79/data-modelling-frontend" target="_blank" rel="noopener noreferrer">Data Modelling Frontend on GitHub →</a>**
 
 ## Browser Support
 
@@ -90,4 +90,4 @@ For detailed documentation, user guides, and API reference, visit the frontend r
 ## Support
 
 For issues, feature requests, or contributions, please visit the
-[GitHub repository](https://github.com/pixie79/data-modelling-frontend){:target="\_blank" rel="noopener noreferrer"}.
+<a href="https://github.com/pixie79/data-modelling-frontend" target="_blank" rel="noopener noreferrer">GitHub repository</a>.

@@ -1,0 +1,10 @@
+{
+  "name": "opendatamodelling",
+  "version": "0.1.0",
+  "description": "Open Data Modelling documentation website",
+  "scripts": {
+    "build": "cd hugo-site && hugo --minify",
+    "serve": "cd hugo-site && hugo server --buildDrafts"
+  },
+  "private": true
+}

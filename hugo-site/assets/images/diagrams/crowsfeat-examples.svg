@@ -1,80 +1,258 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
   <defs>
     <style>
       .bg { fill: #ffffff; }
-      .code-bg { fill: #f5f5f5; stroke: #0066cc; stroke-width: 1; }
-      .text { font-family: 'Courier New', monospace; font-size: 13px; fill: #1a1a1a; }
-      .keyword { fill: #0066cc; font-weight: bold; }
-      .type { fill: #00aa00; }
-      .annotation { fill: #cc6600; }
-      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a1a1a; }
-      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #666666; }
+      .entity-box { fill: #ffffff; stroke: #2563eb; stroke-width: 2; }
+      .entity-title { fill: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+      .attribute { fill: #111827; font-family: Arial, sans-serif; font-size: 14px; }
+      .identifier { fill: #111827; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .relationship-line { stroke: #111827; stroke-width: 2; fill: none; }
+      .relationship-label { fill: #6b7280; font-family: Arial, sans-serif; font-size: 12px; font-style: italic; }
+      .crow-foot { stroke: #111827; stroke-width: 2; fill: none; }
+      .multiplicity-line { stroke: #111827; stroke-width: 2; }
+      .optionality-line { stroke: #111827; stroke-width: 2; }
+      .optional-circle { fill: none; stroke: #111827; stroke-width: 2; }
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #111827; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: #6b7280; }
     </style>
   </defs>
   
   <!-- Background -->
-  <rect width="1000" height="600" class="bg" />
+  <rect width="1400" height="1000" class="bg" />
   
   <!-- Title -->
-  <text x="500" y="30" class="title" text-anchor="middle">Crowsfeat Notation Examples</text>
+  <text x="700" y="40" class="title" text-anchor="middle">Crow's Foot Notation Example</text>
+  <text x="700" y="60" class="subtitle" text-anchor="middle">E-Commerce Data Model</text>
   
-  <!-- Example 1: Simple Fields -->
-  <text x="50" y="70" class="label" font-weight="bold">Simple Fields</text>
-  <rect x="50" y="85" width="280" height="80" class="code-bg" rx="3" />
-  <text x="70" y="110" class="text">name: <tspan class="type">string</tspan></text>
-  <text x="70" y="135" class="text">age: <tspan class="type">number</tspan></text>
-  <text x="70" y="160" class="text">isActive: <tspan class="type">boolean</tspan></text>
+  <!-- Customer Entity -->
+  <rect x="100" y="120" width="200" height="140" class="entity-box" rx="4" />
+  <rect x="100" y="120" width="200" height="30" fill="#2563eb" />
+  <text x="200" y="140" class="entity-title" text-anchor="middle">Customer</text>
+  <text x="120" y="170" class="identifier">* customerId</text>
+  <text x="120" y="195" class="attribute">firstName</text>
+  <text x="120" y="220" class="attribute">lastName</text>
+  <text x="120" y="245" class="attribute">email</text>
   
-  <!-- Example 2: Objects -->
-  <text x="360" y="70" class="label" font-weight="bold">Objects</text>
-  <rect x="360" y="85" width="280" height="100" class="code-bg" rx="3" />
-  <text x="380" y="110" class="text"><tspan class="keyword">user</tspan> {</text>
-  <text x="400" y="135" class="text">id: <tspan class="type">string</tspan></text>
-  <text x="400" y="160" class="text">name: <tspan class="type">string</tspan></text>
-  <text x="400" y="185" class="text">email: <tspan class="type">string</tspan></text>
-  <text x="380" y="210" class="text">}</text>
+  <!-- Order Entity -->
+  <rect x="500" y="120" width="200" height="160" class="entity-box" rx="4" />
+  <rect x="500" y="120" width="200" height="30" fill="#2563eb" />
+  <text x="600" y="140" class="entity-title" text-anchor="middle">Order</text>
+  <text x="520" y="170" class="identifier">* orderId</text>
+  <text x="520" y="195" class="attribute">orderDate</text>
+  <text x="520" y="220" class="attribute">totalAmount</text>
+  <text x="520" y="245" class="attribute">status</text>
   
-  <!-- Example 3: Arrays -->
-  <text x="670" y="70" class="label" font-weight="bold">Arrays</text>
-  <rect x="670" y="85" width="280" height="80" class="code-bg" rx="3" />
-  <text x="690" y="110" class="text">tags: <tspan class="type">string[]</tspan></text>
-  <text x="690" y="135" class="text">users: <tspan class="type">user[]</tspan></text>
-  <text x="690" y="160" class="text">items: <tspan class="type">orderItem[]</tspan></text>
+  <!-- OrderItem Entity -->
+  <rect x="900" y="120" width="200" height="140" class="entity-box" rx="4" />
+  <rect x="900" y="120" width="200" height="30" fill="#2563eb" />
+  <text x="1000" y="140" class="entity-title" text-anchor="middle">OrderItem</text>
+  <text x="920" y="170" class="identifier">* itemId</text>
+  <text x="920" y="195" class="attribute">quantity</text>
+  <text x="920" y="220" class="attribute">unitPrice</text>
   
-  <!-- Example 4: Optional Fields -->
-  <text x="50" y="220" class="label" font-weight="bold">Optional Fields</text>
-  <rect x="50" y="235" width="280" height="100" class="code-bg" rx="3" />
-  <text x="70" y="260" class="text"><tspan class="keyword">user</tspan> {</text>
-  <text x="90" y="285" class="text">id: <tspan class="type">string</span></text>
-  <text x="90" y="310" class="text">email?: <tspan class="type">string</tspan>  <tspan class="annotation">// Optional</tspan></text>
-  <text x="70" y="335" class="text">}</text>
+  <!-- Product Entity -->
+  <rect x="500" y="400" width="200" height="140" class="entity-box" rx="4" />
+  <rect x="500" y="400" width="200" height="30" fill="#2563eb" />
+  <text x="600" y="420" class="entity-title" text-anchor="middle">Product</text>
+  <text x="520" y="450" class="identifier">* productId</text>
+  <text x="520" y="475" class="attribute">productName</text>
+  <text x="520" y="500" class="attribute">price</text>
+  <text x="520" y="525" class="attribute">inStock</text>
   
-  <!-- Example 5: Constraints -->
-  <text x="360" y="220" class="label" font-weight="bold">Constraints</text>
-  <rect x="360" y="235" width="280" height="120" class="code-bg" rx="3" />
-  <text x="380" y="260" class="text"><tspan class="keyword">user</tspan> {</text>
-  <text x="400" y="285" class="text">id: <tspan class="type">string</tspan> <tspan class="annotation">@unique</tspan></text>
-  <text x="400" y="310" class="text">email: <tspan class="type">string</tspan> <tspan class="annotation">@email</tspan></text>
-  <text x="400" y="335" class="text">age: <tspan class="type">number</tspan> <tspan class="annotation">@min(18)</tspan></text>
-  <text x="380" y="360" class="text">}</text>
+  <!-- Relationship: Customer to Order (One-to-Many) -->
+  <!-- Main relationship line ends at entity box edges -->
+  <line x1="300" y1="190" x2="500" y2="190" class="relationship-line" />
+  <!-- Customer side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Perpendicular line: 20px long, centered at (305, 190), vertical (90° to horizontal line) -->
+  <line x1="305" y1="180" x2="305" y2="200" class="multiplicity-line" />
+  <line x1="310" y1="180" x2="310" y2="200" class="optionality-line" />
+  <!-- Order side: Mandatory (perpendicular, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, at connection point) -->
+  <!-- Perpendicular line: 20px long, centered at (475, 190), vertical (90° to horizontal line) - 25px gap from connection -->
+  <line x1="475" y1="180" x2="475" y2="200" class="optionality-line" />
+  <!-- Crow's foot at (500, 190) pointing inward, converging at (485, 190) - matches One or Many pattern -->
+  <line x1="500" y1="185" x2="485" y2="190" class="crow-foot" />
+  <line x1="500" y1="190" x2="485" y2="190" class="crow-foot" />
+  <line x1="500" y1="195" x2="485" y2="190" class="crow-foot" />
+  <!-- Relationship label -->
+  <text x="400" y="175" class="relationship-label" text-anchor="middle">places</text>
   
-  <!-- Example 6: Relationships -->
-  <text x="670" y="220" class="label" font-weight="bold">Relationships</text>
-  <rect x="670" y="235" width="280" height="100" class="code-bg" rx="3" />
-  <text x="690" y="260" class="text"><tspan class="keyword">order</tspan> {</text>
-  <text x="710" y="285" class="text">id: <tspan class="type">string</tspan></text>
-  <text x="710" y="310" class="text">customer: <tspan class="type">user</tspan> <tspan class="annotation">@ref(user.id)</tspan></text>
-  <text x="690" y="335" class="text">}</text>
+  <!-- Relationship: Order to OrderItem (One-to-Many) -->
+  <!-- Main relationship line ends at entity box edges -->
+  <line x1="700" y1="190" x2="900" y2="190" class="relationship-line" />
+  <!-- Order side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Perpendicular line: 20px long, centered at (705, 190), vertical (90° to horizontal line) -->
+  <line x1="705" y1="180" x2="705" y2="200" class="multiplicity-line" />
+  <line x1="710" y1="180" x2="710" y2="200" class="optionality-line" />
+  <!-- OrderItem side: Mandatory (perpendicular, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, at connection point) -->
+  <!-- Perpendicular line: 20px long, centered at (875, 190), vertical (90° to horizontal line) - 25px gap from connection -->
+  <line x1="875" y1="180" x2="875" y2="200" class="optionality-line" />
+  <!-- Crow's foot at (900, 190) pointing inward, converging at (885, 190) - matches One or Many pattern -->
+  <line x1="900" y1="185" x2="885" y2="190" class="crow-foot" />
+  <line x1="900" y1="190" x2="885" y2="190" class="crow-foot" />
+  <line x1="900" y1="195" x2="885" y2="190" class="crow-foot" />
+  <!-- Relationship label -->
+  <text x="800" y="175" class="relationship-label" text-anchor="middle">contains</text>
   
-  <!-- Complex Example -->
-  <text x="50" y="380" class="label" font-weight="bold">Complex Example</text>
-  <rect x="50" y="395" width="900" height="180" class="code-bg" rx="3" />
-  <text x="70" y="420" class="text"><tspan class="keyword">product</tspan> {</text>
-  <text x="90" y="445" class="text">id: <tspan class="type">string</tspan> <tspan class="annotation">@unique</tspan></text>
-  <text x="90" y="470" class="text">name: <tspan class="type">string</tspan></text>
-  <text x="90" y="495" class="text">price: <tspan class="type">number</tspan> <tspan class="annotation">@min(0)</tspan></text>
-  <text x="90" y="520" class="text">category: <tspan class="type">category</tspan> <tspan class="annotation">@ref(category.id)</tspan></text>
-  <text x="90" y="545" class="text">tags: <tspan class="type">string[]</tspan></text>
-  <text x="70" y="570" class="text">}</text>
+  <!-- Relationship: Product to OrderItem (One-to-Many) -->
+  <!-- Main relationship line ends at entity box edges: Product top center (600, 400) to OrderItem bottom edge (900, 260) -->
+  <line x1="600" y1="400" x2="900" y2="260" class="relationship-line" />
+  <!-- Product side: Multiplicity=one (perpendicular, outside, to RIGHT along line) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Line direction: (900-600, 260-400) = (300, -140), length = sqrt(300^2 + 140^2) = 331.06 -->
+  <!-- Perpendicular vector: (-(-140), 300) = (140, 300), normalized = (0.423, 0.906) -->
+  <!-- Move 5px along relationship line direction (toward center): (300/331.06*5, -140/331.06*5) = (4.53, -2.11) -->
+  <!-- Multiplicity line at (604.53, 397.89): 20px long, perpendicular to relationship line -->
+  <!-- For 20px line centered at (604.53, 397.89): start = (604.53 - 10*0.423, 397.89 - 10*0.906) = (600.30, 388.83), end = (604.53 + 10*0.423, 397.89 + 10*0.906) = (608.76, 406.95) -->
+  <line x1="600.30" y1="388.83" x2="608.76" y2="406.95" class="multiplicity-line" />
+  <!-- Move 10px along relationship line direction (toward center): (300/331.06*10, -140/331.06*10) = (9.06, -4.23) -->
+  <!-- Optionality line at (609.06, 395.77): 20px long, perpendicular to relationship line -->
+  <!-- For 20px line centered at (609.06, 395.77): start = (609.06 - 10*0.423, 395.77 - 10*0.906) = (604.83, 386.71), end = (609.06 + 10*0.423, 395.77 + 10*0.906) = (613.29, 404.83) -->
+  <line x1="604.83" y1="386.71" x2="613.29" y2="404.83" class="optionality-line" />
+  <!-- OrderItem side: Mandatory (perpendicular, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, at connection point) -->
+  <!-- Line from (900,260) to (600,400): direction vector = (-300, 140), length = 331.06 -->
+  <!-- Move 25px along relationship line direction (toward center, matching One or Many pattern): (-300/331.06*25, 140/331.06*25) = (-22.65, 10.57) -->
+  <!-- Perpendicular line at (877.35, 270.57): 20px long, centered, perpendicular to relationship line -->
+  <!-- Perpendicular vector to (-300, 140) is (-140, -300), normalized = (-0.423, -0.906) -->
+  <!-- For 20px line centered at (877.35, 270.57): start = (877.35 - 10*0.423, 270.57 - 10*0.906) = (873.12, 261.51), end = (877.35 + 10*0.423, 270.57 + 10*0.906) = (881.58, 279.63) -->
+  <line x1="873.12" y1="261.51" x2="881.58" y2="279.63" class="optionality-line" />
+  <!-- Crow's foot at (900, 260) pointing inward, converging 15px along line direction: (-300/331.06*15, 140/331.06*15) = (-13.59, 6.34) -->
+  <!-- Convergence point: (900 - 13.59, 260 + 6.34) = (886.41, 266.34) -->
+  <!-- Prongs spread perpendicular to line: perpendicular vector = (-0.423, -0.906), spread = 5px -->
+  <line x1="898.9" y1="255.5" x2="886.41" y2="266.34" class="crow-foot" />
+  <line x1="900" y1="260" x2="886.41" y2="266.34" class="crow-foot" />
+  <line x1="901.1" y1="264.5" x2="886.41" y2="266.34" class="crow-foot" />
+  <!-- Relationship label -->
+  <text x="800" y="295" class="relationship-label" text-anchor="middle">references</text>
+  
+  <!-- Standalone Cardinality Examples Section -->
+  <rect x="50" y="580" width="1300" height="400" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" rx="4" />
+  <text x="700" y="610" class="subtitle" text-anchor="middle" font-weight="bold" font-size="18px">Cardinality Examples</text>
+  
+  <!-- Column 1: Examples 1-3 -->
+  <!-- Example 1: Zero or One to Many Optional -->
+  <text x="200" y="655" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">Zero or One to Many Optional</text>
+  <text x="200" y="675" class="relationship-label" font-size="11px" text-anchor="middle">(0..1) --&lt; (0..*)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="85" y1="690" x2="315" y2="690" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Optional (circle, inside, further right) -->
+  <!-- Perpendicular line: 20px long, centered at (105, 690), vertical (90° to horizontal line) -->
+  <line x1="105" y1="680" x2="105" y2="700" class="multiplicity-line" />
+  <circle cx="115" cy="690" r="5" class="optional-circle" />
+  <!-- Right side: Optional (circle, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, to LEFT of connection) -->
+  <circle cx="290" cy="690" r="5" class="optional-circle" />
+  <line x1="315" y1="685" x2="300" y2="690" class="crow-foot" />
+  <line x1="315" y1="690" x2="300" y2="690" class="crow-foot" />
+  <line x1="315" y1="695" x2="300" y2="690" class="crow-foot" />
+  
+  <!-- Example 2: Optional One to Optional One -->
+  <text x="200" y="750" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">Optional One to Optional One</text>
+  <text x="200" y="770" class="relationship-label" font-size="11px" text-anchor="middle">(0..1) -- (0..1)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="85" y1="785" x2="315" y2="785" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Optional (circle, inside, further right) -->
+  <!-- Perpendicular line: 20px long, centered at (105, 785), vertical (90° to horizontal line) -->
+  <line x1="105" y1="775" x2="105" y2="795" class="multiplicity-line" />
+  <circle cx="115" cy="785" r="5" class="optional-circle" />
+  <!-- Right side: Multiplicity=one (perpendicular, outside, to LEFT of connection) + Optional (circle, inside, further left) -->
+  <!-- Perpendicular line: 20px long, centered at (295, 785), vertical (90° to horizontal line) -->
+  <line x1="295" y1="775" x2="295" y2="795" class="multiplicity-line" />
+  <circle cx="285" cy="785" r="5" class="optional-circle" />
+  
+  <!-- Example 3: One Mandatory to One Mandatory -->
+  <text x="200" y="845" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">One Mandatory to One Mandatory</text>
+  <text x="200" y="865" class="relationship-label" font-size="11px" text-anchor="middle">(1) -- (1)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="85" y1="880" x2="315" y2="880" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Perpendicular lines: 20px long, centered at (105, 880) and (110, 880), vertical (90° to horizontal line) -->
+  <line x1="105" y1="870" x2="105" y2="890" class="multiplicity-line" />
+  <line x1="110" y1="870" x2="110" y2="890" class="optionality-line" />
+  <!-- Right side: Multiplicity=one (perpendicular, outside, to LEFT of connection) + Mandatory (perpendicular, inside, further left) -->
+  <!-- Perpendicular lines: 20px long, centered at (295, 880) and (290, 880), vertical (90° to horizontal line) -->
+  <line x1="295" y1="870" x2="295" y2="890" class="multiplicity-line" />
+  <line x1="290" y1="870" x2="290" y2="890" class="optionality-line" />
+  
+  <!-- Column 2: Examples 4-6 -->
+  <!-- Example 4: One Mandatory to Zero or Many -->
+  <text x="500" y="655" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">One Mandatory to Zero or Many</text>
+  <text x="500" y="675" class="relationship-label" font-size="11px" text-anchor="middle">(1) --&lt; (0..*)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="385" y1="690" x2="615" y2="690" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Perpendicular lines: 20px long, centered at (405, 690) and (410, 690), vertical (90° to horizontal line) -->
+  <line x1="405" y1="680" x2="405" y2="700" class="multiplicity-line" />
+  <line x1="410" y1="680" x2="410" y2="700" class="optionality-line" />
+  <!-- Right side: Optional (circle, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, to LEFT of connection) -->
+  <circle cx="590" cy="690" r="5" class="optional-circle" />
+  <line x1="615" y1="685" x2="600" y2="690" class="crow-foot" />
+  <line x1="615" y1="690" x2="600" y2="690" class="crow-foot" />
+  <line x1="615" y1="695" x2="600" y2="690" class="crow-foot" />
+  
+  <!-- Example 5: Zero or Many -->
+  <text x="500" y="750" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">Zero or Many</text>
+  <text x="500" y="770" class="relationship-label" font-size="11px" text-anchor="middle">(0..*) --&lt; (0..*)</text>
+  <!-- Main relationship line extended past markers - left end aligns with crow's foot prongs at x=390, right end aligns with crow's foot prongs at x=615 -->
+  <line x1="390" y1="785" x2="615" y2="785" class="relationship-line" />
+  <!-- Left side: Multiplicity=many (crow's foot pointing INWARD, outside, to RIGHT of connection) + Optional (circle, inside, further right) -->
+  <line x1="390" y1="780" x2="405" y2="785" class="crow-foot" />
+  <line x1="390" y1="785" x2="405" y2="785" class="crow-foot" />
+  <line x1="390" y1="790" x2="405" y2="785" class="crow-foot" />
+  <circle cx="415" cy="785" r="5" class="optional-circle" />
+  <!-- Right side: Optional (circle, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, to LEFT of connection) -->
+  <circle cx="590" cy="785" r="5" class="optional-circle" />
+  <line x1="615" y1="780" x2="600" y2="785" class="crow-foot" />
+  <line x1="615" y1="785" x2="600" y2="785" class="crow-foot" />
+  <line x1="615" y1="790" x2="600" y2="785" class="crow-foot" />
+  
+  <!-- Example 6: One or Many -->
+  <text x="500" y="845" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">One or Many</text>
+  <text x="500" y="865" class="relationship-label" font-size="11px" text-anchor="middle">(1) --&lt; (many)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="385" y1="880" x2="615" y2="880" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Perpendicular lines: 20px long, centered at (405, 880) and (410, 880), vertical (90° to horizontal line) -->
+  <line x1="405" y1="870" x2="405" y2="890" class="multiplicity-line" />
+  <line x1="410" y1="870" x2="410" y2="890" class="optionality-line" />
+  <!-- Right side: Mandatory (perpendicular, inside, closer to center) + gap + Multiplicity=many (crow's foot pointing INWARD, outside, to LEFT of connection) -->
+  <!-- Perpendicular line: 20px long, centered at (590, 880), vertical (90° to horizontal line) -->
+  <line x1="590" y1="870" x2="590" y2="890" class="optionality-line" />
+  <line x1="615" y1="875" x2="600" y2="880" class="crow-foot" />
+  <line x1="615" y1="880" x2="600" y2="880" class="crow-foot" />
+  <line x1="615" y1="885" x2="600" y2="880" class="crow-foot" />
+  
+  <!-- Column 3: Examples 7-8 -->
+  <!-- Example 7: One and Only One -->
+  <text x="800" y="655" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">One and Only One</text>
+  <text x="800" y="675" class="relationship-label" font-size="11px" text-anchor="middle">(1) -- (1)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="685" y1="690" x2="915" y2="690" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Mandatory (perpendicular, inside, further right) -->
+  <!-- Perpendicular lines: 20px long, centered at (705, 690) and (710, 690), vertical (90° to horizontal line) -->
+  <line x1="705" y1="680" x2="705" y2="700" class="multiplicity-line" />
+  <line x1="710" y1="680" x2="710" y2="700" class="optionality-line" />
+  <!-- Right side: Multiplicity=one (perpendicular, outside, to LEFT of connection) + Mandatory (perpendicular, inside, further left) -->
+  <!-- Perpendicular lines: 20px long, centered at (895, 690) and (890, 690), vertical (90° to horizontal line) -->
+  <line x1="895" y1="680" x2="895" y2="700" class="multiplicity-line" />
+  <line x1="890" y1="680" x2="890" y2="700" class="optionality-line" />
+  
+  <!-- Example 8: Zero or One -->
+  <text x="800" y="750" class="attribute" font-size="14px" font-weight="bold" text-anchor="middle">Zero or One</text>
+  <text x="800" y="770" class="relationship-label" font-size="11px" text-anchor="middle">(0..1) -- (1)</text>
+  <!-- Main relationship line extended past markers -->
+  <line x1="685" y1="785" x2="915" y2="785" class="relationship-line" />
+  <!-- Left side: Multiplicity=one (perpendicular, outside, to RIGHT of connection) + Optional (circle, inside, further right) -->
+  <!-- Perpendicular line: 20px long, centered at (705, 785), vertical (90° to horizontal line) -->
+  <line x1="705" y1="775" x2="705" y2="795" class="multiplicity-line" />
+  <circle cx="715" cy="785" r="5" class="optional-circle" />
+  <!-- Right side: Multiplicity=one (perpendicular, outside, to LEFT of connection) + Mandatory (perpendicular, inside, further left) -->
+  <!-- Perpendicular lines: 20px long, centered at (895, 785) and (890, 785), vertical (90° to horizontal line) -->
+  <line x1="895" y1="775" x2="895" y2="795" class="multiplicity-line" />
+  <line x1="890" y1="775" x2="890" y2="795" class="optionality-line" />
+  
+  <!-- Reference Column 4 (moved to right) -->
+  <rect x="1000" y="640" width="280" height="200" fill="#ffffff" stroke="#e5e7eb" stroke-width="1" rx="4" />
+  <text x="1140" y="665" class="subtitle" text-anchor="middle" font-weight="bold">Reference</text>
+  <text x="1140" y="690" class="attribute" font-size="11px" text-anchor="middle">Based on:</text>
+  <text x="1140" y="710" class="attribute" font-size="11px" text-anchor="middle">Wikipedia -</text>
+  <text x="1140" y="730" class="attribute" font-size="11px" text-anchor="middle">Entity-Relationship Model</text>
+  <text x="1140" y="750" class="attribute" font-size="10px" fill="#6b7280" text-anchor="middle">Crow's Foot Notation</text>
 </svg>
-

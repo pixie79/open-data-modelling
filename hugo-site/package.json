@@ -21,6 +21,8 @@
     "htmlhint": "^1.8.0",
     "markdownlint-cli2": "^0.20.0",
     "prettier": "^3.7.4",
+    "puppeteer": "^24.34.0",
+    "sharp": "^0.34.5",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-config-standard-scss": "^16.0.0"

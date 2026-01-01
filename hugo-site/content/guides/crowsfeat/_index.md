@@ -46,7 +46,7 @@ Entities usually have attributes that describe them.
 In Crow's Foot notation, an entity is represented by a **rectangle**, with its name on the top. The
 name is singular (entity) rather than plural (entities).
 
-![Entity representation](/images/diagrams/crowsfeat-examples.svg "Entity in Crow's Foot notation")
+![Entity representation](/images/diagrams/crowsfeat-examples.png "Entity in Crow's Foot notation")
 
 ### Attributes
 
@@ -132,7 +132,7 @@ These combinations make relationships readable as:
 
 ## Example: E-Commerce Data Model
 
-![Crow's Foot Example](/images/diagrams/crowsfeat-examples.svg "Crow's Foot notation example")
+![Crow's Foot Example](/images/diagrams/crowsfeat-examples.png "Crow's Foot notation example")
 
 ### Entities
 

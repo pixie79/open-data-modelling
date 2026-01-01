@@ -63,6 +63,20 @@ cloud-based data management systems.
 - `POST /api/v1/schemas` - Create a schema
 - `GET /api/v1/schemas/{id}` - Get schema details
 
+## Installation
+
+The API is available on [crates.io](https://crates.io/crates/data-modelling-api) for Rust projects:
+
+```bash
+# Add to your Cargo.toml
+cargo add data-modelling-api
+
+# Or specify version
+cargo add data-modelling-api@1.0.1
+```
+
+**Current Version**: v1.0.1
+
 ## Getting Started
 
 ### Authentication
@@ -99,9 +113,10 @@ curl -X POST https://api.opendatamodelling.com/v1/contracts \
 ## Documentation
 
 For complete API documentation, including all endpoints, request/response formats, and
-authentication details, visit the GitHub repository:
+authentication details:
 
-**[Data Modelling API on GitHub →](https://github.com/pixie79/data-modelling-api){:target="_blank" rel="noopener noreferrer"}**
+- **[Data Modelling API on GitHub →](https://github.com/pixie79/data-modelling-api){:target="_blank" rel="noopener noreferrer"}**
+- **[Data Modelling API on crates.io →](https://crates.io/crates/data-modelling-api){:target="_blank" rel="noopener noreferrer"}** (v1.0.1)
 
 ## Screenshot
 

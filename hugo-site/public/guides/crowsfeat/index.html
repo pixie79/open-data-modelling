@@ -1,233 +1,48 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Learn about Crowsfeat notation for representing data structures"><title>Crowsfeat Notation | My New Hugo Site</title><link rel=icon type=image/x-icon href=/favicon.ico><link rel=stylesheet href=/css/main.css><meta property="og:type" content="website"><meta property="og:url" content="https://example.org/guides/crowsfeat/"><meta property="og:title" content="Crowsfeat Notation | My New Hugo Site"><meta property="og:description" content="Learn about Crowsfeat notation for representing data structures"><meta property="og:image" content="https://example.org/"><meta name=twitter:card content="summary_large_image"><meta name=twitter:url content="https://example.org/guides/crowsfeat/"><meta name=twitter:title content="Crowsfeat Notation | My New Hugo Site"><meta name=twitter:description content="Learn about Crowsfeat notation for representing data structures"><meta name=twitter:image content="https://example.org/"></head><body><header role=banner><nav aria-label="Main navigation"><div class=nav-container><a href=/ class=logo aria-label="Open Data Modelling Home"><img src=/logo.svg alt="Open Data Modelling Logo" height=40>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Learn about Crow's Foot notation (IE notation) for Entity-Relationship Diagrams"><title>Crow's Foot Notation | My New Hugo Site</title><link rel=icon type=image/x-icon href=/favicon.ico><link rel=stylesheet href=/css/main.css><meta property="og:type" content="website"><meta property="og:url" content="https://example.org/guides/crowsfeat/"><meta property="og:title" content="Crow's Foot Notation | My New Hugo Site"><meta property="og:description" content="Learn about Crow's Foot notation (IE notation) for Entity-Relationship Diagrams"><meta property="og:image" content="https://example.org/"><meta name=twitter:card content="summary_large_image"><meta name=twitter:url content="https://example.org/guides/crowsfeat/"><meta name=twitter:title content="Crow's Foot Notation | My New Hugo Site"><meta name=twitter:description content="Learn about Crow's Foot notation (IE notation) for Entity-Relationship Diagrams"><meta name=twitter:image content="https://example.org/"></head><body><header role=banner><nav aria-label="Main navigation"><div class=nav-container><a href=/ class=logo aria-label="Open Data Modelling Home"><img src=/logo.svg alt="Open Data Modelling Logo" height=40>
 </a><button class=mobile-menu-toggle aria-label="Toggle menu" aria-expanded=false aria-controls=main-menu>
 <span></span>
 <span></span>
-<span></span></button><ul id=main-menu class=nav-menu role=menubar><li role=none><a href=/ role=menuitem>Home</a></li><li role=none><a href=/data-contracts/ role=menuitem>Data Contracts</a></li><li role=none><a href=/odcs/ role=menuitem>ODCS Standard</a></li><li role=none><a href=/schemas/ role=menuitem>Data Schemas</a></li><li role=none><a href=/products/ role=menuitem>Products</a><ul class=submenu role=menu><li role=none><a href=/products/sdk/ role=menuitem>SDK</a></li><li role=none><a href=/products/api/ role=menuitem>API</a></li><li role=none><a href=/products/osx-app/ role=menuitem>OSX App</a></li><li role=none><a href=/products/web-app/ role=menuitem>Web App</a></li></ul></li><li role=none><a href=/guides/ role=menuitem>Guides</a><ul class=submenu role=menu><li role=none><a href=/guides/import/ role=menuitem>Import</a></li><li role=none><a href=/guides/export/ role=menuitem>Export</a></li><li role=none><a href=/guides/crowsfeat/ role=menuitem>Crowsfeat Notation</a></li><li role=none><a href=/guides/data-flows/ role=menuitem>Data Flows</a></li></ul></li></ul></div></nav></header><main id=main-content><section class=content><header><h1>Crowsfeat Notation</h1><p class=description>Learn about Crowsfeat notation for representing data structures</p></header><div class=content-body><h2 id=crowsfeat-notation-guide>Crowsfeat Notation Guide</h2><p>Crowsfeat notation is a concise, readable way to represent data structures and relationships.
-It provides a human-friendly syntax for describing data models that is both easy to write
-and easy to understand.</p><h2 id=what-is-crowsfeat>What is Crowsfeat?</h2><p>Crowsfeat notation uses a simple, text-based syntax to describe:</p><ul><li><strong>Data Structures</strong>: Objects, arrays, and nested structures</li><li><strong>Field Types</strong>: String, number, boolean, date, and custom types</li><li><strong>Relationships</strong>: References between data entities</li><li><strong>Constraints</strong>: Validation rules and requirements</li></ul><h2 id=basic-syntax>Basic Syntax</h2><h3 id=simple-fields>Simple Fields</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>name: string
-</span></span><span style=display:flex><span>age: number
-</span></span><span style=display:flex><span>isActive: boolean
-</span></span><span style=display:flex><span>createdAt: date
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Objects
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>user {
-</span></span><span style=display:flex><span>  id: string
-</span></span><span style=display:flex><span>  name: string
-</span></span><span style=display:flex><span>  email: string
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Arrays
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>tags: string[]
-</span></span><span style=display:flex><span>users: user[]
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Nested Structures
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>order {
-</span></span><span style=display:flex><span>  id: string
-</span></span><span style=display:flex><span>  customer: user
-</span></span><span style=display:flex><span>  items: orderItem[]
-</span></span><span style=display:flex><span>  total: number
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>orderItem {
-</span></span><span style=display:flex><span>  productId: string
-</span></span><span style=display:flex><span>  quantity: number
-</span></span><span style=display:flex><span>  price: number
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>## Advanced Features
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Optional Fields
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Use `?` to mark optional fields:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>user {
-</span></span><span style=display:flex><span>  id: string
-</span></span><span style=display:flex><span>  name: string
-</span></span><span style=display:flex><span>  email?: string  // Optional
-</span></span><span style=display:flex><span>  phone?: string   // Optional
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Required Fields
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Fields are required by default. Use `!` to explicitly mark as required:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>user {
-</span></span><span style=display:flex><span>  id: string!
-</span></span><span style=display:flex><span>  name: string!
-</span></span><span style=display:flex><span>  email: string!
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Field Constraints
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Add constraints using `@` annotations:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>user {
-</span></span><span style=display:flex><span>  id: string @unique
-</span></span><span style=display:flex><span>  email: string @email @unique
-</span></span><span style=display:flex><span>  age: number @min(18) @max(120)
-</span></span><span style=display:flex><span>  password: string @minLength(8)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Relationships
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Define relationships between entities:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>order {
-</span></span><span style=display:flex><span>  id: string
-</span></span><span style=display:flex><span>  customer: user @ref(user.id)
-</span></span><span style=display:flex><span>  items: orderItem[] @ref(orderItem.orderId)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>## Examples
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>![Crowsfeat Examples](/images/diagrams/crowsfeat-examples.svg &#34;Crowsfeat notation examples&#34;)
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### E-Commerce Example
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>product {
-</span></span><span style=display:flex><span>  id: string @unique
-</span></span><span style=display:flex><span>  name: string
-</span></span><span style=display:flex><span>  description: string
-</span></span><span style=display:flex><span>  price: number @min(0)
-</span></span><span style=display:flex><span>  category: category @ref(category.id)
-</span></span><span style=display:flex><span>  tags: string[]
-</span></span><span style=display:flex><span>  inStock: boolean
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>category {
-</span></span><span style=display:flex><span>  id: string @unique
-</span></span><span style=display:flex><span>  name: string
-</span></span><span style=display:flex><span>  parent?: category @ref(category.id)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>order {
-</span></span><span style=display:flex><span>  id: string @unique
-</span></span><span style=display:flex><span>  customer: user @ref(user.id)
-</span></span><span style=display:flex><span>  items: orderItem[]
-</span></span><span style=display:flex><span>  status: orderStatus
-</span></span><span style=display:flex><span>  createdAt: date
-</span></span><span style=display:flex><span>  total: number
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>orderItem {
-</span></span><span style=display:flex><span>  id: string @unique
-</span></span><span style=display:flex><span>  order: order @ref(order.id)
-</span></span><span style=display:flex><span>  product: product @ref(product.id)
-</span></span><span style=display:flex><span>  quantity: number @min(1)
-</span></span><span style=display:flex><span>  price: number
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>## Converting to Other Formats
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Crowsfeat notation can be converted to:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>- **JSON Schema**: Standard JSON Schema format
-</span></span><span style=display:flex><span>- **Avro**: Apache Avro schema
-</span></span><span style=display:flex><span>- **Protobuf**: Protocol Buffer definitions
-</span></span><span style=display:flex><span>- **SQL DDL**: Database schema definitions
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Example Conversion
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>**Crowsfeat:**
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>user {
-</span></span><span style=display:flex><span>  id: string @unique
-</span></span><span style=display:flex><span>  name: string
-</span></span><span style=display:flex><span>  email: string @email
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>**JSON Schema:**
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```json
-</span></span><span style=display:flex><span>{
-</span></span><span style=display:flex><span>  &#34;type&#34;: &#34;object&#34;,
-</span></span><span style=display:flex><span>  &#34;properties&#34;: {
-</span></span><span style=display:flex><span>    &#34;id&#34;: { &#34;type&#34;: &#34;string&#34; },
-</span></span><span style=display:flex><span>    &#34;name&#34;: { &#34;type&#34;: &#34;string&#34; },
-</span></span><span style=display:flex><span>    &#34;email&#34;: { &#34;type&#34;: &#34;string&#34;, &#34;format&#34;: &#34;email&#34; }
+<span></span></button><ul id=main-menu class=nav-menu role=menubar><li role=none><a href=/ role=menuitem>Home</a></li><li role=none><a href=/data-contracts/ role=menuitem>Data Contracts</a></li><li role=none><a href=/odcs/ role=menuitem>ODCS Standard</a></li><li role=none><a href=/schemas/ role=menuitem>Data Schemas</a></li><li role=none><a href=/products/ role=menuitem>Products</a><ul class=submenu role=menu><li role=none><a href=/products/sdk/ role=menuitem>SDK</a></li><li role=none><a href=/products/api/ role=menuitem>API</a></li><li role=none><a href=/products/osx-app/ role=menuitem>OSX App</a></li><li role=none><a href=/products/web-app/ role=menuitem>Web App</a></li></ul></li><li role=none><a href=/guides/ role=menuitem>Guides</a><ul class=submenu role=menu><li role=none><a href=/guides/import/ role=menuitem>Import</a></li><li role=none><a href=/guides/export/ role=menuitem>Export</a></li><li role=none><a href=/guides/crowsfeat/ role=menuitem>Crowsfeat Notation</a></li><li role=none><a href=/guides/data-flows/ role=menuitem>Data Flows</a></li></ul></li></ul></div></nav></header><main id=main-content><section class=content><header><h1>Crow's Foot Notation</h1><p class=description>Learn about Crow's Foot notation (IE notation) for Entity-Relationship Diagrams</p></header><div class=content-body><h2 id=crows-foot-notation-guide>Crow&rsquo;s Foot Notation Guide</h2><p>Crow&rsquo;s Foot notation (also known as IE notation) is a widely-used data modeling notation that uses
+graphical symbols to represent entities, attributes, and relationships in Entity-Relationship
+Diagrams (ERDs). The most recognizable characteristic of Crow&rsquo;s Foot notation is the three-pronged
+&ldquo;many&rdquo; symbol, which is how this notation style got its name.</p><h2 id=history-of-crows-foot-notation>History of Crow&rsquo;s Foot Notation</h2><p>Crow&rsquo;s Foot notation dates back to an article by Gordon Everest in 1976 (Fifth Computing
+Conference, IEEE). Originally called the &ldquo;inverted arrow&rdquo; to distinguish it from Bachman&rsquo;s
+notation, it was designed to avoid implying directionality or a physical access path while being
+visually intuitive in showing &ldquo;manyness.&rdquo;</p><p>As Mr. Everest explained:</p><blockquote><p>I preferred it to the arrow because it did not imply directionality or a physical access path, and
+it was visually intuitive, showing manyness. Others then started referring to it as chicken feet.
+I now prefer to call it a FORK, which is short and to the point.</p></blockquote><p>The notation can be represented in a standard character set as:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>[ X ]——&lt;[ Y ]
+</span></span></code></pre></div><p>This shows that an individual X can relate to multiple Ys (and each Y relates to at most one X).</p><h2 id=entities>Entities</h2><h3 id=definition>Definition</h3><p>An <strong>entity</strong> is a representation of a class of object. It can be a person, place, thing, or concept.
+Entities usually have attributes that describe them.</p><h3 id=representation>Representation</h3><p>In Crow&rsquo;s Foot notation, an entity is represented by a <strong>rectangle</strong>, with its name on the top. The
+name is singular (entity) rather than plural (entities).</p><p><img src=/images/diagrams/crowsfeat-examples.svg alt="Entity representation" title="Entity in Crow's Foot notation"></p><h3 id=attributes>Attributes</h3><p>An <strong>attribute</strong> is a property that describes a particular entity. Attributes are listed inside the
+entity rectangle.</p><p>The attribute(s) that uniquely distinguishes an instance of the entity is the <strong>identifier</strong>.
+Usually, this type of attribute is marked with an asterisk (*).</p><h2 id=relationships>Relationships</h2><h3 id=definition-1>Definition</h3><p><strong>Relationships</strong> illustrate the association between two entities. They are presented as a straight
+line. Usually, each relationship has a name, expressed as a verb, written on the relationship line.
+This describes what kind of relationship connects the objects.</p><p>Note that Crow&rsquo;s Foot notation typically represents binary relationships (between two entities). In
+the Entity-Relationship model, representing ternary or higher order relationships can be
+problematic.</p><h3 id=cardinality>Cardinality</h3><p>Relationships have two indicators shown on both sides of the line:</p><h4 id=1-multiplicity-maximum>1. Multiplicity (Maximum)</h4><p>The first indicator (often called <strong>multiplicity</strong>) refers to the <em>maximum</em> number of times that an
+instance of one entity can be associated with instances in the related entity. It can be <strong>one</strong> or
+<strong>many</strong>.</p><ul><li><strong>Multiplicity of one</strong>: Represented by a straight line perpendicular to the relationship line</li><li><strong>Multiplicity of many</strong>: Represented by the three-pronged &ldquo;crow&rsquo;s foot&rdquo; symbol</li></ul><h4 id=2-optionality-minimum>2. Optionality (Minimum)</h4><p>The second indicator describes the <em>minimum</em> number of times one instance can be related to others.
+It can be <strong>zero</strong> or <strong>one</strong>, and accordingly describes the relationship as <strong>optional</strong> or
+<strong>mandatory</strong>.</p><ul><li><strong>Mandatory relationship</strong>: Represented by a straight line perpendicular to the relationship line</li><li><strong>Optional relationship</strong>: Represented by an empty circle</li></ul><h3 id=symbol-placement>Symbol Placement</h3><p>The combination of these two indicators is always in a specific order. Placed on the outside edge of
+the relationship:</p><ol><li><strong>Multiplicity symbol</strong> comes first (one line or crow&rsquo;s foot)</li><li><strong>Optionality symbol</strong> comes after (mandatory line or optional circle)</li></ol><h3 id=relationship-types>Relationship Types</h3><p>There are four possible combinations at each end of a relationship:</p><h4 id=zero-or-many-optional-many>Zero or Many (Optional Many)</h4><ul><li>Empty circle + Crow&rsquo;s foot</li><li>Represents: 0 to many instances</li></ul><h4 id=one-or-many-mandatory-many>One or Many (Mandatory Many)</h4><ul><li>Straight line + Crow&rsquo;s foot</li><li>Represents: 1 to many instances (at least one required)</li></ul><h4 id=one-and-only-one-mandatory-one>One and Only One (Mandatory One)</h4><ul><li>Straight line + Straight line</li><li>Represents: Exactly one instance (required)</li></ul><h4 id=zero-or-one-optional-one>Zero or One (Optional One)</h4><ul><li>Empty circle + Straight line</li><li>Represents: 0 or 1 instance (optional)</li></ul><h3 id=relationship-degrees>Relationship Degrees</h3><p>These combinations make relationships readable as:</p><ul><li><strong>One-to-one</strong>: Each entity instance relates to exactly one instance of the other entity</li><li><strong>One-to-many</strong>: One entity instance relates to many instances of the other entity</li><li><strong>Many-to-many</strong>: Many instances of one entity relate to many instances of the other entity</li></ul><h2 id=example-e-commerce-data-model>Example: E-Commerce Data Model</h2><p><img src=/images/diagrams/crowsfeat-examples.svg alt="Crow&rsquo;s Foot Example" title="Crow's Foot notation example"></p><h3 id=entities-1>Entities</h3><ul><li><strong>Customer</strong>: Represents customers who place orders</li><li><strong>Order</strong>: Represents customer orders</li><li><strong>OrderItem</strong>: Represents individual items within an order</li><li><strong>Product</strong>: Represents products available for purchase</li></ul><h3 id=relationships-1>Relationships</h3><ul><li><strong>Customer to Order</strong>: One-to-many (one customer can have many orders, each order belongs to one
+customer)</li><li><strong>Order to OrderItem</strong>: One-to-many (one order contains many items, each item belongs to one
+order)</li><li><strong>Product to OrderItem</strong>: One-to-many (one product can appear in many order items, each order
+item references one product)</li></ul><h2 id=using-crows-foot-notation-in-data-modeling>Using Crow&rsquo;s Foot Notation in Data Modeling</h2><h3 id=creating-entity-relationship-diagrams>Creating Entity-Relationship Diagrams</h3><p>When creating ERDs using Crow&rsquo;s Foot notation:</p><ol><li><strong>Identify Entities</strong>: Determine the main objects or concepts in your system</li><li><strong>Define Attributes</strong>: List the properties that describe each entity</li><li><strong>Identify Relationships</strong>: Determine how entities relate to each other</li><li><strong>Specify Cardinality</strong>: For each relationship, determine:<ul><li>Maximum multiplicity (one or many)</li><li>Minimum optionality (zero or one)</li></ul></li><li><strong>Draw the Diagram</strong>: Use rectangles for entities, lines for relationships, and Crow&rsquo;s Foot
+symbols for cardinality</li></ol><h3 id=best-practices>Best Practices</h3><ul><li>Use <strong>singular</strong> names for entities (Customer, not Customers)</li><li>Mark <strong>identifiers</strong> (primary keys) with an asterisk (*)</li><li>Use <strong>descriptive relationship names</strong> (verbs) on relationship lines</li><li>Keep diagrams <strong>readable</strong> by avoiding crossing lines where possible</li><li><strong>Document</strong> complex relationships with notes if needed</li></ul><h2 id=crows-foot-vs-other-notations>Crow&rsquo;s Foot vs. Other Notations</h2><p>Crow&rsquo;s Foot notation is one of several ERD notations. Others include:</p><ul><li><strong>Chen notation</strong>: Uses diamonds for relationships</li><li><strong>UML notation</strong>: Object-oriented modeling notation</li><li><strong>Barker notation</strong>: Another popular ERD notation</li><li><strong>Arrow notation</strong>: Uses arrows to show relationships</li><li><strong>IDEF1X notation</strong>: Integration Definition for Information Modeling</li></ul><p>Crow&rsquo;s Foot notation is particularly popular because:</p><ul><li>It&rsquo;s visually intuitive (the crow&rsquo;s foot clearly shows &ldquo;many&rdquo;)</li><li>It doesn&rsquo;t imply directionality (unlike arrow notation)</li><li>It&rsquo;s widely supported by database modeling tools</li><li>It&rsquo;s easy to read and understand</li></ul><h2 id=converting-crows-foot-diagrams-to-data-contracts>Converting Crow&rsquo;s Foot Diagrams to Data Contracts</h2><p>In Open Data Modelling, Crow&rsquo;s Foot ERD diagrams can be converted to data contracts:</p><ol><li><strong>Entities</strong> become contract schemas</li><li><strong>Attributes</strong> become schema fields</li><li><strong>Relationships</strong> become references or nested structures</li><li><strong>Cardinality</strong> informs validation rules and constraints</li></ol><h3 id=example-conversion>Example Conversion</h3><p><strong>Crow&rsquo;s Foot ERD:</strong></p><ul><li>Customer entity with attributes: id*, name, email</li><li>Order entity with attributes: id*, customerId, date, total</li><li>Relationship: Customer (1) ——&lt; (many) Order</li></ul><p><strong>Data Contract:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;customer&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;id&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;email&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span>
 </span></span><span style=display:flex><span>  },
-</span></span><span style=display:flex><span>  &#34;required&#34;: [&#34;id&#34;, &#34;name&#34;, &#34;email&#34;]
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;order&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;id&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;customerId&#34;</span>: <span style=color:#e6db74>&#34;string&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;date&#34;</span>: <span style=color:#e6db74>&#34;date&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;total&#34;</span>: <span style=color:#e6db74>&#34;number&#34;</span>
+</span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>## Best Practices
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Naming Conventions
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>- Use **camelCase** for field names: `firstName`, `lastName`
-</span></span><span style=display:flex><span>- Use **singular** for entity names: `user`, `order`, `product`
-</span></span><span style=display:flex><span>- Use **descriptive** names that clearly indicate purpose
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Organization
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>- Group related fields together
-</span></span><span style=display:flex><span>- Use comments for complex logic: `// Calculated field`
-</span></span><span style=display:flex><span>- Keep structures focused and cohesive
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Documentation
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>- Add descriptions for complex fields
-</span></span><span style=display:flex><span>- Document relationships and constraints
-</span></span><span style=display:flex><span>- Include examples where helpful
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>## Using Crowsfeat in Open Data Modelling
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Creating Contracts
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>You can create data contracts directly using Crowsfeat notation:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>1. Navigate to **New Contract**
-</span></span><span style=display:flex><span>2. Select **Crowsfeat** as the input format
-</span></span><span style=display:flex><span>3. Enter your Crowsfeat notation
-</span></span><span style=display:flex><span>4. The system will parse and convert to a contract
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Importing Crowsfeat
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```javascript
-</span></span><span style=display:flex><span>import { CrowsfeatParser } from &#34;@opendatamodelling/sdk&#34;;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>const parser = new CrowsfeatParser();
-</span></span><span style=display:flex><span>const contract = parser.parse(crowsfeatNotation);
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>### Exporting to Crowsfeat
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Export existing contracts to Crowsfeat notation for easy reading and editing:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>```javascript
-</span></span><span style=display:flex><span>const exporter = new ContractExporter();
-</span></span><span style=display:flex><span>const crowsfeat = await exporter.export({
-</span></span><span style=display:flex><span>  contractId: &#34;contract-123&#34;,
-</span></span><span style=display:flex><span>  format: &#34;crowsfeat&#34;,
-</span></span><span style=display:flex><span>});
-</span></span><span style=display:flex><span>```text
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>## Related Resources
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>- [Data Flows Guide](/guides/data-flows/) - Learn about data flows
-</span></span><span style=display:flex><span>- [Data Contracts](/data-contracts/) - Understanding data contracts
-</span></span><span style=display:flex><span>- [Import Guide](/guides/import/) - Import Crowsfeat notation
-</span></span><span style=display:flex><span>- [Export Guide](/guides/export/) - Export to Crowsfeat format
-</span></span></code></pre></div></div></section></main><footer role=contentinfo><div class=footer-container><div class=footer-section><h2>Open Data Modelling</h2><p>Documentation and resources for data contracts, schemas, and data modelling tools.</p></div><div class=footer-section><h3>Resources</h3><ul></ul></div></div><div class=footer-bottom><p>&copy; 2026 Open Data Modelling. All rights reserved.</p></div></footer></body></html>
+</span></span></code></pre></div><h2 id=related-resources>Related Resources</h2><ul><li><a href=/guides/data-flows/>Data Flows Guide</a> - Learn about data flows and their relationship to data
+models</li><li><a href=/data-contracts/>Data Contracts</a> - Understanding data contracts</li><li><a href=/guides/import/>Import Guide</a> - Import ERD diagrams and convert to contracts</li><li><a href=/guides/export/>Export Guide</a> - Export contracts to various formats</li><li><a href=https://www.red-gate.com/blog/crow-s-foot-notation>Red Gate Blog: Crow&rsquo;s Foot Notation</a> - Original
+reference on Crow&rsquo;s Foot notation</li></ul><h2 id=references>References</h2><ol><li>Gordon Everest (1976). &ldquo;Basic Data Structure Models Explained with a Common Example.&rdquo; Fifth
+Computing Conference, IEEE.</li><li>John Vincent Carlis, Joseph D. Maguire (2001). <em>Mastering Data Modeling: A User-driven
+Approach</em>.</li></ol></div></section></main><footer role=contentinfo><div class=footer-container><div class=footer-section><h2>Open Data Modelling</h2><p>Documentation and resources for data contracts, schemas, and data modelling tools.</p></div><div class=footer-section><h3>Resources</h3><ul></ul></div></div><div class=footer-bottom><p>&copy; 2026 Open Data Modelling. All rights reserved.</p></div></footer></body></html>

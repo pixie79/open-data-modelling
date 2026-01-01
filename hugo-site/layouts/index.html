@@ -1,0 +1,106 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">{{ .Title }}</h1>
+    <p class="hero-description">{{ .Site.Params.description }}</p>
+    <div class="hero-cta">
+      <a href="/data-contracts/" class="btn btn-primary">Get Started</a>
+      <a href="/products/" class="btn btn-secondary">Explore Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features">
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📋</div>
+      <h2>Data Contracts</h2>
+      <p>Learn about data contracts and why they matter for data quality, reliability, and collaboration.</p>
+      <a href="/data-contracts/" class="feature-link">Learn more →</a>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">📐</div>
+      <h2>ODCS Standard</h2>
+      <p>Discover the Open Data Contract Standard, a comprehensive framework for defining and managing data contracts.</p>
+      <a href="/odcs/" class="feature-link">Explore ODCS →</a>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">🗂️</div>
+      <h2>Data Schemas</h2>
+      <p>Understand different types of data schemas and their benefits for your data management practices.</p>
+      <a href="/schemas/" class="feature-link">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits">
+  <h2 class="section-title">Why Data Contracts Matter</h2>
+  <div class="benefits-grid">
+    <div class="benefit-item">
+      <div class="benefit-icon">✓</div>
+      <h3>Reliability</h3>
+      <p>Consistent data structure across systems</p>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">✓</div>
+      <h3>Quality</h3>
+      <p>Validation and enforcement of data standards</p>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">✓</div>
+      <h3>Collaboration</h3>
+      <p>Clear expectations between data producers and consumers</p>
+    </div>
+    <div class="benefit-item">
+      <div class="benefit-icon">✓</div>
+      <h3>Evolution</h3>
+      <p>Safe schema changes with versioning and compatibility</p>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="products-preview">
+  <h2 class="section-title">Our Products</h2>
+  <div class="products-grid">
+    <div class="product-card">
+      <h3>SDK</h3>
+      <p>Build data contracts programmatically with our comprehensive SDK</p>
+      <a href="/products/sdk/" class="product-link">Learn more →</a>
+    </div>
+    <div class="product-card">
+      <h3>API</h3>
+      <p>RESTful API for managing and validating data contracts</p>
+      <a href="/products/api/" class="product-link">Learn more →</a>
+    </div>
+    <div class="product-card">
+      <h3>OSX App</h3>
+      <p>Native macOS application for visual data contract design</p>
+      <a href="/products/osx-app/" class="product-link">Learn more →</a>
+    </div>
+    <div class="product-card">
+      <h3>Web App</h3>
+      <p>Browser-based tool for creating and managing data contracts</p>
+      <a href="/products/web-app/" class="product-link">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Ready to Get Started?</h2>
+    <p>Explore our guides and start building better data contracts today</p>
+    <div class="cta-buttons">
+      <a href="/guides/" class="btn btn-primary">View Guides</a>
+      <a href="/products/" class="btn btn-outline">Browse Products</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+

@@ -6,7 +6,8 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
   <link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}">
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  {{- $styles := resources.Get "css/main.scss" | css.Sass | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">

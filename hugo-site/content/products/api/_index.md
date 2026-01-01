@@ -101,7 +101,7 @@ curl -X POST https://api.opendatamodelling.com/v1/contracts \
 For complete API documentation, including all endpoints, request/response formats, and
 authentication details, visit the GitHub repository:
 
-**[Data Modelling API on GitHub →](https://github.com/pixie79/data-modelling-api){:target="\_blank" rel="noopener noreferrer"}**
+**[Data Modelling API on GitHub →](https://github.com/pixie79/data-modelling-api){:target="_blank" rel="noopener noreferrer"}**
 
 ## Screenshot
 
@@ -123,4 +123,4 @@ authentication details, visit the GitHub repository:
 ## Support
 
 For issues, questions, or contributions, please visit the
-[GitHub repository](https://github.com/pixie79/data-modelling-api){:target="\_blank" rel="noopener noreferrer"}.
+[GitHub repository](https://github.com/pixie79/data-modelling-api){:target="_blank" rel="noopener noreferrer"}.

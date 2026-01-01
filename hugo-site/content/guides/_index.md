@@ -54,5 +54,4 @@ Create visual representations of data movement and transformation.
 - [Data Contracts](/data-contracts/) - Learn about data contracts
 - [ODCS Standard](/odcs/) - Open Data Contract Standard documentation
 - [Products](/products/) - Available tools and applications
-- [Open Data Product Standard](https://bitol-io.github.io/open-data-product-standard){:target="\_blank"
-  rel="noopener noreferrer"} - Related standard documentation
+- [Open Data Product Standard](https://bitol-io.github.io/open-data-product-standard){:target="_blank" rel="noopener noreferrer"} - Related standard documentation

@@ -145,6 +145,5 @@ curl -X POST https://api.opendatamodelling.com/v1/import \
 ## Related Resources
 
 - [Export Guide](/guides/export/) - Learn how to export contracts
-- [ODCS Documentation](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="\_blank"
-  rel="noopener noreferrer"} - Standard format documentation
+- [ODCS Documentation](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="_blank" rel="noopener noreferrer"} - Standard format documentation
 - [Data Contracts](/data-contracts/) - Understanding data contracts

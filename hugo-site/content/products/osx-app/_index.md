@@ -68,7 +68,7 @@ brew install --cask opendatamodelling
 
 For detailed documentation, user guides, and troubleshooting, visit the frontend repository:
 
-**[Data Modelling Frontend on GitHub →](https://github.com/pixie79/data-modelling-frontend){:target="\_blank" rel="noopener noreferrer"}**
+**[Data Modelling Frontend on GitHub →](https://github.com/pixie79/data-modelling-frontend){:target="_blank" rel="noopener noreferrer"}**
 
 ## System Requirements
 
@@ -92,4 +92,4 @@ For detailed documentation, user guides, and troubleshooting, visit the frontend
 ## Support
 
 For issues, feature requests, or contributions, please visit the
-[GitHub repository](https://github.com/pixie79/data-modelling-frontend){:target="\_blank" rel="noopener noreferrer"}.
+[GitHub repository](https://github.com/pixie79/data-modelling-frontend){:target="_blank" rel="noopener noreferrer"}.

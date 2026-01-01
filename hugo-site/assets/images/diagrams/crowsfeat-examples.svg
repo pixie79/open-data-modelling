@@ -1,80 +1,177 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
   <defs>
     <style>
       .bg { fill: #ffffff; }
-      .code-bg { fill: #f5f5f5; stroke: #0066cc; stroke-width: 1; }
-      .text { font-family: 'Courier New', monospace; font-size: 13px; fill: #1a1a1a; }
-      .keyword { fill: #0066cc; font-weight: bold; }
-      .type { fill: #00aa00; }
-      .annotation { fill: #cc6600; }
-      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a1a1a; }
-      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #666666; }
+      .entity-box { fill: #ffffff; stroke: #2563eb; stroke-width: 2; }
+      .entity-title { fill: #2563eb; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+      .attribute { fill: #111827; font-family: Arial, sans-serif; font-size: 14px; }
+      .identifier { fill: #111827; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .relationship-line { stroke: #111827; stroke-width: 2; fill: none; }
+      .relationship-label { fill: #6b7280; font-family: Arial, sans-serif; font-size: 12px; font-style: italic; }
+      .crow-foot { stroke: #111827; stroke-width: 2; fill: none; }
+      .mandatory-line { stroke: #111827; stroke-width: 2; }
+      .optional-circle { fill: none; stroke: #111827; stroke-width: 2; }
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #111827; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: #6b7280; }
     </style>
   </defs>
   
   <!-- Background -->
-  <rect width="1000" height="600" class="bg" />
+  <rect width="1200" height="800" class="bg" />
   
   <!-- Title -->
-  <text x="500" y="30" class="title" text-anchor="middle">Crowsfeat Notation Examples</text>
+  <text x="600" y="40" class="title" text-anchor="middle">Crow's Foot Notation Example</text>
+  <text x="600" y="60" class="subtitle" text-anchor="middle">E-Commerce Data Model</text>
   
-  <!-- Example 1: Simple Fields -->
-  <text x="50" y="70" class="label" font-weight="bold">Simple Fields</text>
-  <rect x="50" y="85" width="280" height="80" class="code-bg" rx="3" />
-  <text x="70" y="110" class="text">name: <tspan class="type">string</tspan></text>
-  <text x="70" y="135" class="text">age: <tspan class="type">number</tspan></text>
-  <text x="70" y="160" class="text">isActive: <tspan class="type">boolean</tspan></text>
+  <!-- Customer Entity -->
+  <rect x="100" y="120" width="200" height="140" class="entity-box" rx="4" />
+  <rect x="100" y="120" width="200" height="30" fill="#2563eb" />
+  <text x="200" y="140" class="entity-title" text-anchor="middle">Customer</text>
+  <text x="120" y="170" class="identifier">* customerId</text>
+  <text x="120" y="195" class="attribute">firstName</text>
+  <text x="120" y="220" class="attribute">lastName</text>
+  <text x="120" y="245" class="attribute">email</text>
   
-  <!-- Example 2: Objects -->
-  <text x="360" y="70" class="label" font-weight="bold">Objects</text>
-  <rect x="360" y="85" width="280" height="100" class="code-bg" rx="3" />
-  <text x="380" y="110" class="text"><tspan class="keyword">user</tspan> {</text>
-  <text x="400" y="135" class="text">id: <tspan class="type">string</tspan></text>
-  <text x="400" y="160" class="text">name: <tspan class="type">string</tspan></text>
-  <text x="400" y="185" class="text">email: <tspan class="type">string</tspan></text>
-  <text x="380" y="210" class="text">}</text>
+  <!-- Order Entity -->
+  <rect x="500" y="120" width="200" height="160" class="entity-box" rx="4" />
+  <rect x="500" y="120" width="200" height="30" fill="#2563eb" />
+  <text x="600" y="140" class="entity-title" text-anchor="middle">Order</text>
+  <text x="520" y="170" class="identifier">* orderId</text>
+  <text x="520" y="195" class="attribute">orderDate</text>
+  <text x="520" y="220" class="attribute">totalAmount</text>
+  <text x="520" y="245" class="attribute">status</text>
   
-  <!-- Example 3: Arrays -->
-  <text x="670" y="70" class="label" font-weight="bold">Arrays</text>
-  <rect x="670" y="85" width="280" height="80" class="code-bg" rx="3" />
-  <text x="690" y="110" class="text">tags: <tspan class="type">string[]</tspan></text>
-  <text x="690" y="135" class="text">users: <tspan class="type">user[]</tspan></text>
-  <text x="690" y="160" class="text">items: <tspan class="type">orderItem[]</tspan></text>
+  <!-- OrderItem Entity -->
+  <rect x="900" y="120" width="200" height="140" class="entity-box" rx="4" />
+  <rect x="900" y="120" width="200" height="30" fill="#2563eb" />
+  <text x="1000" y="140" class="entity-title" text-anchor="middle">OrderItem</text>
+  <text x="920" y="170" class="identifier">* itemId</text>
+  <text x="920" y="195" class="attribute">quantity</text>
+  <text x="920" y="220" class="attribute">unitPrice</text>
   
-  <!-- Example 4: Optional Fields -->
-  <text x="50" y="220" class="label" font-weight="bold">Optional Fields</text>
-  <rect x="50" y="235" width="280" height="100" class="code-bg" rx="3" />
-  <text x="70" y="260" class="text"><tspan class="keyword">user</tspan> {</text>
-  <text x="90" y="285" class="text">id: <tspan class="type">string</span></text>
-  <text x="90" y="310" class="text">email?: <tspan class="type">string</tspan>  <tspan class="annotation">// Optional</tspan></text>
-  <text x="70" y="335" class="text">}</text>
+  <!-- Product Entity -->
+  <rect x="500" y="400" width="200" height="140" class="entity-box" rx="4" />
+  <rect x="500" y="400" width="200" height="30" fill="#2563eb" />
+  <text x="600" y="420" class="entity-title" text-anchor="middle">Product</text>
+  <text x="520" y="450" class="identifier">* productId</text>
+  <text x="520" y="475" class="attribute">productName</text>
+  <text x="520" y="500" class="attribute">price</text>
+  <text x="520" y="525" class="attribute">inStock</text>
   
-  <!-- Example 5: Constraints -->
-  <text x="360" y="220" class="label" font-weight="bold">Constraints</text>
-  <rect x="360" y="235" width="280" height="120" class="code-bg" rx="3" />
-  <text x="380" y="260" class="text"><tspan class="keyword">user</tspan> {</text>
-  <text x="400" y="285" class="text">id: <tspan class="type">string</tspan> <tspan class="annotation">@unique</tspan></text>
-  <text x="400" y="310" class="text">email: <tspan class="type">string</tspan> <tspan class="annotation">@email</tspan></text>
-  <text x="400" y="335" class="text">age: <tspan class="type">number</tspan> <tspan class="annotation">@min(18)</tspan></text>
-  <text x="380" y="360" class="text">}</text>
+  <!-- Relationship: Customer to Order (One-to-Many) -->
+  <!-- Line from Customer to Order -->
+  <line x1="300" y1="190" x2="500" y2="190" class="relationship-line" />
+  <!-- Mandatory line on Customer side -->
+  <line x1="300" y1="190" x2="310" y2="190" class="mandatory-line" />
+  <line x1="300" y1="185" x2="310" y2="190" class="mandatory-line" />
+  <line x1="300" y1="195" x2="310" y2="190" class="mandatory-line" />
+  <!-- Crow's foot on Order side (many) -->
+  <line x1="500" y1="190" x2="490" y2="180" class="crow-foot" />
+  <line x1="500" y1="190" x2="490" y2="190" class="crow-foot" />
+  <line x1="500" y1="190" x2="490" y2="200" class="crow-foot" />
+  <!-- Relationship label -->
+  <text x="400" y="180" class="relationship-label" text-anchor="middle">places</text>
   
-  <!-- Example 6: Relationships -->
-  <text x="670" y="220" class="label" font-weight="bold">Relationships</text>
-  <rect x="670" y="235" width="280" height="100" class="code-bg" rx="3" />
-  <text x="690" y="260" class="text"><tspan class="keyword">order</tspan> {</text>
-  <text x="710" y="285" class="text">id: <tspan class="type">string</tspan></text>
-  <text x="710" y="310" class="text">customer: <tspan class="type">user</tspan> <tspan class="annotation">@ref(user.id)</tspan></text>
-  <text x="690" y="335" class="text">}</text>
+  <!-- Relationship: Order to OrderItem (One-to-Many) -->
+  <!-- Line from Order to OrderItem -->
+  <line x1="700" y1="190" x2="900" y2="190" class="relationship-line" />
+  <!-- Mandatory line on Order side -->
+  <line x1="700" y1="190" x2="710" y2="190" class="mandatory-line" />
+  <line x1="700" y1="185" x2="710" y2="190" class="mandatory-line" />
+  <line x1="700" y1="195" x2="710" y2="190" class="mandatory-line" />
+  <!-- Crow's foot on OrderItem side (many) -->
+  <line x1="900" y1="190" x2="890" y2="180" class="crow-foot" />
+  <line x1="900" y1="190" x2="890" y2="190" class="crow-foot" />
+  <line x1="900" y1="190" x2="890" y2="200" class="crow-foot" />
+  <!-- Relationship label -->
+  <text x="800" y="180" class="relationship-label" text-anchor="middle">contains</text>
   
-  <!-- Complex Example -->
-  <text x="50" y="380" class="label" font-weight="bold">Complex Example</text>
-  <rect x="50" y="395" width="900" height="180" class="code-bg" rx="3" />
-  <text x="70" y="420" class="text"><tspan class="keyword">product</tspan> {</text>
-  <text x="90" y="445" class="text">id: <tspan class="type">string</tspan> <tspan class="annotation">@unique</tspan></text>
-  <text x="90" y="470" class="text">name: <tspan class="type">string</tspan></text>
-  <text x="90" y="495" class="text">price: <tspan class="type">number</tspan> <tspan class="annotation">@min(0)</tspan></text>
-  <text x="90" y="520" class="text">category: <tspan class="type">category</tspan> <tspan class="annotation">@ref(category.id)</tspan></text>
-  <text x="90" y="545" class="text">tags: <tspan class="type">string[]</tspan></text>
-  <text x="70" y="570" class="text">}</text>
+  <!-- Relationship: Product to OrderItem (One-to-Many) -->
+  <!-- Line from Product to OrderItem -->
+  <line x1="600" y1="400" x2="1000" y2="190" class="relationship-line" />
+  <!-- Mandatory line on Product side -->
+  <line x1="600" y1="400" x2="610" y2="395" class="mandatory-line" />
+  <line x1="600" y1="400" x2="605" y2="390" class="mandatory-line" />
+  <line x1="600" y1="400" x2="605" y2="400" class="mandatory-line" />
+  <!-- Crow's foot on OrderItem side (many) -->
+  <line x1="1000" y1="190" x2="990" y2="180" class="crow-foot" />
+  <line x1="1000" y1="190" x2="990" y2="190" class="crow-foot" />
+  <line x1="1000" y1="190" x2="990" y2="200" class="crow-foot" />
+  <!-- Relationship label -->
+  <text x="800" y="300" class="relationship-label" text-anchor="middle">references</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="600" width="300" height="180" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" rx="4" />
+  <text x="200" y="625" class="subtitle" text-anchor="middle" font-weight="bold">Symbols</text>
+  
+  <!-- Legend: Mandatory -->
+  <line x1="70" y1="650" x2="80" y2="650" class="mandatory-line" />
+  <line x1="70" y1="645" x2="80" y2="650" class="mandatory-line" />
+  <line x1="70" y1="655" x2="80" y2="650" class="mandatory-line" />
+  <text x="100" y="655" class="attribute" font-size="12px">Mandatory (one)</text>
+  
+  <!-- Legend: Optional -->
+  <circle cx="75" cy="680" r="5" class="optional-circle" />
+  <text x="100" y="685" class="attribute" font-size="12px">Optional (zero or one)</text>
+  
+  <!-- Legend: Many -->
+  <line x1="70" y1="710" x2="60" y2="700" class="crow-foot" />
+  <line x1="70" y1="710" x2="60" y2="710" class="crow-foot" />
+  <line x1="70" y1="710" x2="60" y2="720" class="crow-foot" />
+  <text x="100" y="715" class="attribute" font-size="12px">Many</text>
+  
+  <!-- Legend: Identifier -->
+  <text x="70" y="745" class="identifier" font-size="12px">* attributeName</text>
+  <text x="100" y="760" class="attribute" font-size="11px">Primary key (identifier)</text>
+  
+  <!-- Cardinality Examples -->
+  <rect x="400" y="600" width="400" height="180" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" rx="4" />
+  <text x="600" y="625" class="subtitle" text-anchor="middle" font-weight="bold">Cardinality Examples</text>
+  
+  <!-- One-to-Many Example -->
+  <text x="420" y="655" class="attribute" font-size="12px">One-to-Many:</text>
+  <line x1="520" y1="650" x2="560" y2="650" class="relationship-line" />
+  <line x1="520" y1="650" x2="530" y2="650" class="mandatory-line" />
+  <line x1="520" y1="645" x2="530" y2="650" class="mandatory-line" />
+  <line x1="520" y1="655" x2="530" y2="650" class="mandatory-line" />
+  <line x1="560" y1="650" x2="550" y2="640" class="crow-foot" />
+  <line x1="560" y1="650" x2="550" y2="650" class="crow-foot" />
+  <line x1="560" y1="650" x2="550" y2="660" class="crow-foot" />
+  <text x="540" y="645" class="relationship-label" font-size="10px">(1) ——< (many)</text>
+  
+  <!-- Optional Many Example -->
+  <text x="420" y="685" class="attribute" font-size="12px">Optional Many:</text>
+  <line x1="520" y1="680" x2="560" y2="680" class="relationship-line" />
+  <circle cx="525" cy="680" r="5" class="optional-circle" />
+  <line x1="560" y1="680" x2="550" y2="670" class="crow-foot" />
+  <line x1="560" y1="680" x2="550" y2="680" class="crow-foot" />
+  <line x1="560" y1="680" x2="550" y2="690" class="crow-foot" />
+  <text x="540" y="675" class="relationship-label" font-size="10px">(0..1) ——< (many)</text>
+  
+  <!-- One-to-One Example -->
+  <text x="420" y="715" class="attribute" font-size="12px">One-to-One:</text>
+  <line x1="520" y1="710" x2="560" y2="710" class="relationship-line" />
+  <line x1="520" y1="710" x2="530" y2="710" class="mandatory-line" />
+  <line x1="520" y1="705" x2="530" y2="710" class="mandatory-line" />
+  <line x1="520" y1="715" x2="530" y2="710" class="mandatory-line" />
+  <line x1="560" y1="710" x2="550" y2="710" class="mandatory-line" />
+  <line x1="560" y1="705" x2="550" y2="710" class="mandatory-line" />
+  <line x1="560" y1="715" x2="550" y2="710" class="mandatory-line" />
+  <text x="540" y="705" class="relationship-label" font-size="10px">(1) —— (1)</text>
+  
+  <!-- Optional One Example -->
+  <text x="420" y="745" class="attribute" font-size="12px">Optional One:</text>
+  <line x1="520" y1="740" x2="560" y2="740" class="relationship-line" />
+  <circle cx="525" cy="740" r="5" class="optional-circle" />
+  <line x1="560" y1="740" x2="550" y2="740" class="mandatory-line" />
+  <line x1="560" y1="735" x2="550" y2="740" class="mandatory-line" />
+  <line x1="560" y1="745" x2="550" y2="740" class="mandatory-line" />
+  <text x="540" y="735" class="relationship-label" font-size="10px">(0..1) —— (1)</text>
+  
+  <!-- Reference -->
+  <text x="850" y="625" class="subtitle" font-weight="bold">Reference</text>
+  <text x="850" y="650" class="attribute" font-size="11px">Based on:</text>
+  <text x="850" y="670" class="attribute" font-size="11px">Red Gate Blog -</text>
+  <text x="850" y="690" class="attribute" font-size="11px">Crow's Foot Notation</text>
+  <text x="850" y="710" class="attribute" font-size="10px" fill="#6b7280">Gordon Everest (1976)</text>
 </svg>
-

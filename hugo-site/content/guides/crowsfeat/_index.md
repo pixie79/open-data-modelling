@@ -1,255 +1,243 @@
 ---
-title: "Crowsfeat Notation"
-description: "Learn about Crowsfeat notation for representing data structures"
+title: "Crow's Foot Notation"
+description: "Learn about Crow's Foot notation (IE notation) for Entity-Relationship Diagrams"
 date: 2025-01-01
 draft: false
 weight: 30
 ---
 
-## Crowsfeat Notation Guide
+## Crow's Foot Notation Guide
 
-Crowsfeat notation is a concise, readable way to represent data structures and relationships.
-It provides a human-friendly syntax for describing data models that is both easy to write
-and easy to understand.
+Crow's Foot notation (also known as IE notation) is a widely-used data modeling notation that uses
+graphical symbols to represent entities, attributes, and relationships in Entity-Relationship
+Diagrams (ERDs). The most recognizable characteristic of Crow's Foot notation is the three-pronged
+"many" symbol, which is how this notation style got its name.
 
-## What is Crowsfeat?
+## History of Crow's Foot Notation
 
-Crowsfeat notation uses a simple, text-based syntax to describe:
+Crow's Foot notation dates back to an article by Gordon Everest in 1976 (Fifth Computing
+Conference, IEEE). Originally called the "inverted arrow" to distinguish it from Bachman's
+notation, it was designed to avoid implying directionality or a physical access path while being
+visually intuitive in showing "manyness."
 
-- **Data Structures**: Objects, arrays, and nested structures
-- **Field Types**: String, number, boolean, date, and custom types
-- **Relationships**: References between data entities
-- **Constraints**: Validation rules and requirements
+As Mr. Everest explained:
 
-## Basic Syntax
+> I preferred it to the arrow because it did not imply directionality or a physical access path, and
+> it was visually intuitive, showing manyness. Others then started referring to it as chicken feet.
+> I now prefer to call it a FORK, which is short and to the point.
 
-### Simple Fields
-
-````text
-name: string
-age: number
-isActive: boolean
-createdAt: date
-```text
-
-### Objects
+The notation can be represented in a standard character set as:
 
 ```text
-user {
-  id: string
-  name: string
-  email: string
-}
-```text
+[ X ]——<[ Y ]
+```
 
-### Arrays
+This shows that an individual X can relate to multiple Ys (and each Y relates to at most one X).
 
-```text
-tags: string[]
-users: user[]
-```text
+## Entities
 
-### Nested Structures
+### Definition
 
-```text
-order {
-  id: string
-  customer: user
-  items: orderItem[]
-  total: number
-}
+An **entity** is a representation of a class of object. It can be a person, place, thing, or concept.
+Entities usually have attributes that describe them.
 
-orderItem {
-  productId: string
-  quantity: number
-  price: number
-}
-```text
+### Representation
 
-## Advanced Features
+In Crow's Foot notation, an entity is represented by a **rectangle**, with its name on the top. The
+name is singular (entity) rather than plural (entities).
 
-### Optional Fields
+![Entity representation](/images/diagrams/crowsfeat-examples.svg "Entity in Crow's Foot notation")
 
-Use `?` to mark optional fields:
+### Attributes
 
-```text
-user {
-  id: string
-  name: string
-  email?: string  // Optional
-  phone?: string   // Optional
-}
-```text
+An **attribute** is a property that describes a particular entity. Attributes are listed inside the
+entity rectangle.
 
-### Required Fields
+The attribute(s) that uniquely distinguishes an instance of the entity is the **identifier**.
+Usually, this type of attribute is marked with an asterisk (*).
 
-Fields are required by default. Use `!` to explicitly mark as required:
+## Relationships
 
-```text
-user {
-  id: string!
-  name: string!
-  email: string!
-}
-```text
+### Definition
 
-### Field Constraints
+**Relationships** illustrate the association between two entities. They are presented as a straight
+line. Usually, each relationship has a name, expressed as a verb, written on the relationship line.
+This describes what kind of relationship connects the objects.
 
-Add constraints using `@` annotations:
+Note that Crow's Foot notation typically represents binary relationships (between two entities). In
+the Entity-Relationship model, representing ternary or higher order relationships can be
+problematic.
 
-```text
-user {
-  id: string @unique
-  email: string @email @unique
-  age: number @min(18) @max(120)
-  password: string @minLength(8)
-}
-```text
+### Cardinality
+
+Relationships have two indicators shown on both sides of the line:
+
+#### 1. Multiplicity (Maximum)
+
+The first indicator (often called **multiplicity**) refers to the _maximum_ number of times that an
+instance of one entity can be associated with instances in the related entity. It can be **one** or
+**many**.
+
+- **Multiplicity of one**: Represented by a straight line perpendicular to the relationship line
+- **Multiplicity of many**: Represented by the three-pronged "crow's foot" symbol
+
+#### 2. Optionality (Minimum)
+
+The second indicator describes the _minimum_ number of times one instance can be related to others.
+It can be **zero** or **one**, and accordingly describes the relationship as **optional** or
+**mandatory**.
+
+- **Mandatory relationship**: Represented by a straight line perpendicular to the relationship line
+- **Optional relationship**: Represented by an empty circle
+
+### Symbol Placement
+
+The combination of these two indicators is always in a specific order. Placed on the outside edge of
+the relationship:
+
+1. **Multiplicity symbol** comes first (one line or crow's foot)
+2. **Optionality symbol** comes after (mandatory line or optional circle)
+
+### Relationship Types
+
+There are four possible combinations at each end of a relationship:
+
+#### Zero or Many (Optional Many)
+
+- Empty circle + Crow's foot
+- Represents: 0 to many instances
+
+#### One or Many (Mandatory Many)
+
+- Straight line + Crow's foot
+- Represents: 1 to many instances (at least one required)
+
+#### One and Only One (Mandatory One)
+
+- Straight line + Straight line
+- Represents: Exactly one instance (required)
+
+#### Zero or One (Optional One)
+
+- Empty circle + Straight line
+- Represents: 0 or 1 instance (optional)
+
+### Relationship Degrees
+
+These combinations make relationships readable as:
+
+- **One-to-one**: Each entity instance relates to exactly one instance of the other entity
+- **One-to-many**: One entity instance relates to many instances of the other entity
+- **Many-to-many**: Many instances of one entity relate to many instances of the other entity
+
+## Example: E-Commerce Data Model
+
+![Crow's Foot Example](/images/diagrams/crowsfeat-examples.svg "Crow's Foot notation example")
+
+### Entities
+
+- **Customer**: Represents customers who place orders
+- **Order**: Represents customer orders
+- **OrderItem**: Represents individual items within an order
+- **Product**: Represents products available for purchase
 
 ### Relationships
 
-Define relationships between entities:
+- **Customer to Order**: One-to-many (one customer can have many orders, each order belongs to one
+  customer)
+- **Order to OrderItem**: One-to-many (one order contains many items, each item belongs to one
+  order)
+- **Product to OrderItem**: One-to-many (one product can appear in many order items, each order
+  item references one product)
 
-```text
-order {
-  id: string
-  customer: user @ref(user.id)
-  items: orderItem[] @ref(orderItem.orderId)
-}
-```text
+## Using Crow's Foot Notation in Data Modeling
 
-## Examples
+### Creating Entity-Relationship Diagrams
 
-![Crowsfeat Examples](/images/diagrams/crowsfeat-examples.svg "Crowsfeat notation examples")
+When creating ERDs using Crow's Foot notation:
 
-### E-Commerce Example
+1. **Identify Entities**: Determine the main objects or concepts in your system
+2. **Define Attributes**: List the properties that describe each entity
+3. **Identify Relationships**: Determine how entities relate to each other
+4. **Specify Cardinality**: For each relationship, determine:
+   - Maximum multiplicity (one or many)
+   - Minimum optionality (zero or one)
+5. **Draw the Diagram**: Use rectangles for entities, lines for relationships, and Crow's Foot
+   symbols for cardinality
 
-```text
-product {
-  id: string @unique
-  name: string
-  description: string
-  price: number @min(0)
-  category: category @ref(category.id)
-  tags: string[]
-  inStock: boolean
-}
+### Best Practices
 
-category {
-  id: string @unique
-  name: string
-  parent?: category @ref(category.id)
-}
+- Use **singular** names for entities (Customer, not Customers)
+- Mark **identifiers** (primary keys) with an asterisk (*)
+- Use **descriptive relationship names** (verbs) on relationship lines
+- Keep diagrams **readable** by avoiding crossing lines where possible
+- **Document** complex relationships with notes if needed
 
-order {
-  id: string @unique
-  customer: user @ref(user.id)
-  items: orderItem[]
-  status: orderStatus
-  createdAt: date
-  total: number
-}
+## Crow's Foot vs. Other Notations
 
-orderItem {
-  id: string @unique
-  order: order @ref(order.id)
-  product: product @ref(product.id)
-  quantity: number @min(1)
-  price: number
-}
-```text
+Crow's Foot notation is one of several ERD notations. Others include:
 
-## Converting to Other Formats
+- **Chen notation**: Uses diamonds for relationships
+- **UML notation**: Object-oriented modeling notation
+- **Barker notation**: Another popular ERD notation
+- **Arrow notation**: Uses arrows to show relationships
+- **IDEF1X notation**: Integration Definition for Information Modeling
 
-Crowsfeat notation can be converted to:
+Crow's Foot notation is particularly popular because:
 
-- **JSON Schema**: Standard JSON Schema format
-- **Avro**: Apache Avro schema
-- **Protobuf**: Protocol Buffer definitions
-- **SQL DDL**: Database schema definitions
+- It's visually intuitive (the crow's foot clearly shows "many")
+- It doesn't imply directionality (unlike arrow notation)
+- It's widely supported by database modeling tools
+- It's easy to read and understand
+
+## Converting Crow's Foot Diagrams to Data Contracts
+
+In Open Data Modelling, Crow's Foot ERD diagrams can be converted to data contracts:
+
+1. **Entities** become contract schemas
+2. **Attributes** become schema fields
+3. **Relationships** become references or nested structures
+4. **Cardinality** informs validation rules and constraints
 
 ### Example Conversion
 
-**Crowsfeat:**
+**Crow's Foot ERD:**
 
-```text
-user {
-  id: string @unique
-  name: string
-  email: string @email
-}
-```text
+- Customer entity with attributes: id*, name, email
+- Order entity with attributes: id*, customerId, date, total
+- Relationship: Customer (1) ——< (many) Order
 
-**JSON Schema:**
+**Data Contract:**
 
 ```json
 {
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "email": { "type": "string", "format": "email" }
+  "customer": {
+    "id": "string",
+    "name": "string",
+    "email": "string"
   },
-  "required": ["id", "name", "email"]
+  "order": {
+    "id": "string",
+    "customerId": "string",
+    "date": "date",
+    "total": "number"
+  }
 }
-```text
-
-## Best Practices
-
-### Naming Conventions
-
-- Use **camelCase** for field names: `firstName`, `lastName`
-- Use **singular** for entity names: `user`, `order`, `product`
-- Use **descriptive** names that clearly indicate purpose
-
-### Organization
-
-- Group related fields together
-- Use comments for complex logic: `// Calculated field`
-- Keep structures focused and cohesive
-
-### Documentation
-
-- Add descriptions for complex fields
-- Document relationships and constraints
-- Include examples where helpful
-
-## Using Crowsfeat in Open Data Modelling
-
-### Creating Contracts
-
-You can create data contracts directly using Crowsfeat notation:
-
-1. Navigate to **New Contract**
-2. Select **Crowsfeat** as the input format
-3. Enter your Crowsfeat notation
-4. The system will parse and convert to a contract
-
-### Importing Crowsfeat
-
-```javascript
-import { CrowsfeatParser } from "@opendatamodelling/sdk";
-
-const parser = new CrowsfeatParser();
-const contract = parser.parse(crowsfeatNotation);
-```text
-
-### Exporting to Crowsfeat
-
-Export existing contracts to Crowsfeat notation for easy reading and editing:
-
-```javascript
-const exporter = new ContractExporter();
-const crowsfeat = await exporter.export({
-  contractId: "contract-123",
-  format: "crowsfeat",
-});
-```text
+```
 
 ## Related Resources
 
-- [Data Flows Guide](/guides/data-flows/) - Learn about data flows
+- [Data Flows Guide](/guides/data-flows/) - Learn about data flows and their relationship to data
+  models
 - [Data Contracts](/data-contracts/) - Understanding data contracts
-- [Import Guide](/guides/import/) - Import Crowsfeat notation
-- [Export Guide](/guides/export/) - Export to Crowsfeat format
-````
+- [Import Guide](/guides/import/) - Import ERD diagrams and convert to contracts
+- [Export Guide](/guides/export/) - Export contracts to various formats
+- [Red Gate Blog: Crow's Foot Notation](https://www.red-gate.com/blog/crow-s-foot-notation) - Original
+  reference on Crow's Foot notation
+
+## References
+
+1. Gordon Everest (1976). "Basic Data Structure Models Explained with a Common Example." Fifth
+   Computing Conference, IEEE.
+2. John Vincent Carlis, Joseph D. Maguire (2001). _Mastering Data Modeling: A User-driven
+   Approach_.

@@ -1,0 +1,39 @@
+baseURL = "https://opendatamodelling.com"
+languageCode = "en-us"
+title = "Open Data Modelling"
+theme = "opendatamodelling"
+
+[params]
+  description = "Open Data Modelling - Documentation and resources for data contracts, schemas, and data modelling tools"
+  logo = "/logo.svg"
+  favicon = "/favicon.ico"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    codeFences = true
+
+[build]
+  writeStats = true
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  tdewolff = { css = { keepCSS2 = true }, html = { keepComments = false, keepConditionalComments = false, keepDefaultAttrVals = true, keepDocumentTags = true, keepEndTags = true, keepQuotes = false, keepWhitespace = false }, js = { keepVarNames = false, noCopyright = true }, json = { keepNumbers = true, precision = 0 } }
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "index"
+

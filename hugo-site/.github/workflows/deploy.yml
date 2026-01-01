@@ -1,0 +1,88 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+      - "001-odm-docs-site"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  quality-checks:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./hugo-site
+
+      - name: Run Markdown linting
+        run: npm run lint:markdown
+        working-directory: ./hugo-site
+
+      - name: Run CSS linting
+        run: npm run lint:css
+        working-directory: ./hugo-site
+
+      - name: Run JavaScript linting
+        run: npm run lint:js
+        working-directory: ./hugo-site
+
+      - name: Format check
+        run: npx prettier --check "**/*.{md,json,yaml,yml,js,ts,css,scss,html}"
+        working-directory: ./hugo-site
+
+      - name: Security audit
+        run: npm audit --audit-level=high
+        working-directory: ./hugo-site
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+        working-directory: ./hugo-site
+
+      - name: Check links
+        run: npm run test:links
+        working-directory: ./hugo-site
+        continue-on-error: true
+
+  deploy:
+    name: Deploy to Cloudflare Pages
+    needs: quality-checks
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/001-odm-docs-site'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+        working-directory: ./hugo-site
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: opendatamodelling-docs
+          directory: hugo-site/public

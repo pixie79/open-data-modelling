@@ -1,0 +1,31 @@
+<header role="banner">
+  <nav aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="{{ "/" | relURL }}" class="logo" aria-label="Open Data Modelling Home">
+        <img src="{{ .Site.Params.logo | default "/logo.svg" }}" alt="Open Data Modelling Logo" height="40">
+      </a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="main-menu" class="nav-menu" role="menubar">
+        {{ range .Site.Data.navigation.items }}
+        <li role="none">
+          <a href="{{ .url | relURL }}" role="menuitem">{{ .title }}</a>
+          {{ if .children }}
+          <ul class="submenu" role="menu">
+            {{ range .children }}
+            <li role="none">
+              <a href="{{ .url | relURL }}" role="menuitem">{{ .title }}</a>
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Contracts on My New Hugo Site</title><link>https://example.org/data-contracts/</link><description>Recent content in Data Contracts on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/data-contracts/index.xml" rel="self" type="application/rss+xml"/><item><title>What Are Data Contracts?</title><link>https://example.org/data-contracts/what-are-data-contracts/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://example.org/data-contracts/what-are-data-contracts/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Data contracts are formal specifications that define the structure, format, and expectations
+for data exchange between systems. Think of them as API contracts, but for data pipelines and
+data products.&lt;/p&gt;
+&lt;h2 id="core-concepts"&gt;Core Concepts&lt;/h2&gt;
+&lt;h3 id="schema-definition"&gt;Schema Definition&lt;/h3&gt;
+&lt;p&gt;At the heart of every data contract is a schema that defines:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fields&lt;/strong&gt;: What data fields are included&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Types&lt;/strong&gt;: The data type of each field (string, integer, date, etc.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Constraints&lt;/strong&gt;: Validation rules (required fields, value ranges, formats)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nested Structures&lt;/strong&gt;: Complex objects and arrays&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="format-specification"&gt;Format Specification&lt;/h3&gt;
+&lt;p&gt;Data contracts specify how data is serialized:&lt;/p&gt;</description></item></channel></rss>

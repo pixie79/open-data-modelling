@@ -1,0 +1,45 @@
+items:
+  - title: "Home"
+    url: "/"
+    weight: 1
+  - title: "Data Contracts"
+    url: "/data-contracts/"
+    weight: 2
+  - title: "ODCS Standard"
+    url: "/odcs/"
+    weight: 3
+  - title: "Data Schemas"
+    url: "/schemas/"
+    weight: 4
+  - title: "Products"
+    url: "/products/"
+    weight: 5
+    children:
+      - title: "SDK"
+        url: "/products/sdk/"
+        weight: 1
+      - title: "API"
+        url: "/products/api/"
+        weight: 2
+      - title: "OSX App"
+        url: "/products/osx-app/"
+        weight: 3
+      - title: "Web App"
+        url: "/products/web-app/"
+        weight: 4
+  - title: "Guides"
+    url: "/guides/"
+    weight: 6
+    children:
+      - title: "Import"
+        url: "/guides/import/"
+        weight: 1
+      - title: "Export"
+        url: "/guides/export/"
+        weight: 2
+      - title: "Crowsfeat Notation"
+        url: "/guides/crowsfeat/"
+        weight: 3
+      - title: "Data Flows"
+        url: "/guides/data-flows/"
+        weight: 4

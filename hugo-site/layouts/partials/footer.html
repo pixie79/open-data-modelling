@@ -1,0 +1,21 @@
+<footer role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2>Open Data Modelling</h2>
+      <p>Documentation and resources for data contracts, schemas, and data modelling tools.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Resources</h3>
+      <ul>
+        {{ range .Site.Data.external_links.links }}
+        <li>
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} Open Data Modelling. All rights reserved.</p>
+  </div>
+</footer>

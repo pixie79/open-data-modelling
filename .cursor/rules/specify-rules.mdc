@@ -1,0 +1,29 @@
+# open-data-modelling Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2026-01-01
+
+## Active Technologies
+
+- Hugo (latest stable, minimum 0.100+), Go templates, Markdown, CSS/SCSS, JavaScript/TypeScript (if needed for interactivity) + Hugo static site generator, Hugo theme (or custom theme), Cloudflare Pages deployment, markdownlint, stylelint, prettier, ESLint (if JS/TS used) (001-odm-docs-site)
+
+## Project Structure
+
+```text
+src/
+tests/
+```
+
+## Commands
+
+npm test && npm run lint
+
+## Code Style
+
+Hugo (latest stable, minimum 0.100+), Go templates, Markdown, CSS/SCSS, JavaScript/TypeScript (if needed for interactivity): Follow standard conventions
+
+## Recent Changes
+
+- 001-odm-docs-site: Added Hugo (latest stable, minimum 0.100+), Go templates, Markdown, CSS/SCSS, JavaScript/TypeScript (if needed for interactivity) + Hugo static site generator, Hugo theme (or custom theme), Cloudflare Pages deployment, markdownlint, stylelint, prettier, ESLint (if JS/TS used)
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->

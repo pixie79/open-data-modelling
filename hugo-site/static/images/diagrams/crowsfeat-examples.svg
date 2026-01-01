@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .code-bg { fill: #f5f5f5; stroke: #0066cc; stroke-width: 1; }
+      .text { font-family: 'Courier New', monospace; font-size: 13px; fill: #1a1a1a; }
+      .keyword { fill: #0066cc; font-weight: bold; }
+      .type { fill: #00aa00; }
+      .annotation { fill: #cc6600; }
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a1a1a; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #666666; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="600" class="bg" />
+  
+  <!-- Title -->
+  <text x="500" y="30" class="title" text-anchor="middle">Crowsfeat Notation Examples</text>
+  
+  <!-- Example 1: Simple Fields -->
+  <text x="50" y="70" class="label" font-weight="bold">Simple Fields</text>
+  <rect x="50" y="85" width="280" height="80" class="code-bg" rx="3" />
+  <text x="70" y="110" class="text">name: <tspan class="type">string</tspan></text>
+  <text x="70" y="135" class="text">age: <tspan class="type">number</tspan></text>
+  <text x="70" y="160" class="text">isActive: <tspan class="type">boolean</tspan></text>
+  
+  <!-- Example 2: Objects -->
+  <text x="360" y="70" class="label" font-weight="bold">Objects</text>
+  <rect x="360" y="85" width="280" height="100" class="code-bg" rx="3" />
+  <text x="380" y="110" class="text"><tspan class="keyword">user</tspan> {</text>
+  <text x="400" y="135" class="text">id: <tspan class="type">string</tspan></text>
+  <text x="400" y="160" class="text">name: <tspan class="type">string</tspan></text>
+  <text x="400" y="185" class="text">email: <tspan class="type">string</tspan></text>
+  <text x="380" y="210" class="text">}</text>
+  
+  <!-- Example 3: Arrays -->
+  <text x="670" y="70" class="label" font-weight="bold">Arrays</text>
+  <rect x="670" y="85" width="280" height="80" class="code-bg" rx="3" />
+  <text x="690" y="110" class="text">tags: <tspan class="type">string[]</tspan></text>
+  <text x="690" y="135" class="text">users: <tspan class="type">user[]</tspan></text>
+  <text x="690" y="160" class="text">items: <tspan class="type">orderItem[]</tspan></text>
+  
+  <!-- Example 4: Optional Fields -->
+  <text x="50" y="220" class="label" font-weight="bold">Optional Fields</text>
+  <rect x="50" y="235" width="280" height="100" class="code-bg" rx="3" />
+  <text x="70" y="260" class="text"><tspan class="keyword">user</tspan> {</text>
+  <text x="90" y="285" class="text">id: <tspan class="type">string</span></text>
+  <text x="90" y="310" class="text">email?: <tspan class="type">string</tspan>  <tspan class="annotation">// Optional</tspan></text>
+  <text x="70" y="335" class="text">}</text>
+  
+  <!-- Example 5: Constraints -->
+  <text x="360" y="220" class="label" font-weight="bold">Constraints</text>
+  <rect x="360" y="235" width="280" height="120" class="code-bg" rx="3" />
+  <text x="380" y="260" class="text"><tspan class="keyword">user</tspan> {</text>
+  <text x="400" y="285" class="text">id: <tspan class="type">string</tspan> <tspan class="annotation">@unique</tspan></text>
+  <text x="400" y="310" class="text">email: <tspan class="type">string</tspan> <tspan class="annotation">@email</tspan></text>
+  <text x="400" y="335" class="text">age: <tspan class="type">number</tspan> <tspan class="annotation">@min(18)</tspan></text>
+  <text x="380" y="360" class="text">}</text>
+  
+  <!-- Example 6: Relationships -->
+  <text x="670" y="220" class="label" font-weight="bold">Relationships</text>
+  <rect x="670" y="235" width="280" height="100" class="code-bg" rx="3" />
+  <text x="690" y="260" class="text"><tspan class="keyword">order</tspan> {</text>
+  <text x="710" y="285" class="text">id: <tspan class="type">string</tspan></text>
+  <text x="710" y="310" class="text">customer: <tspan class="type">user</tspan> <tspan class="annotation">@ref(user.id)</tspan></text>
+  <text x="690" y="335" class="text">}</text>
+  
+  <!-- Complex Example -->
+  <text x="50" y="380" class="label" font-weight="bold">Complex Example</text>
+  <rect x="50" y="395" width="900" height="180" class="code-bg" rx="3" />
+  <text x="70" y="420" class="text"><tspan class="keyword">product</tspan> {</text>
+  <text x="90" y="445" class="text">id: <tspan class="type">string</tspan> <tspan class="annotation">@unique</tspan></text>
+  <text x="90" y="470" class="text">name: <tspan class="type">string</tspan></text>
+  <text x="90" y="495" class="text">price: <tspan class="type">number</tspan> <tspan class="annotation">@min(0)</tspan></text>
+  <text x="90" y="520" class="text">category: <tspan class="type">category</tspan> <tspan class="annotation">@ref(category.id)</tspan></text>
+  <text x="90" y="545" class="text">tags: <tspan class="type">string[]</tspan></text>
+  <text x="70" y="570" class="text">}</text>
+</svg>
+

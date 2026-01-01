@@ -172,7 +172,7 @@ Different schema types scale differently as data volumes and complexity increase
 **Example**: User profile data (name, email, preferences)
 
 | Schema Type | Serialization Time | Deserialization Time | Payload Size |
-|-------------|-------------------|---------------------|--------------|
+| ----------- | ------------------ | -------------------- | ------------ |
 | JSON Schema | ~0.1ms | ~0.15ms | ~800 bytes |
 | Avro | ~0.05ms | ~0.08ms | ~600 bytes |
 | Protobuf | ~0.03ms | ~0.05ms | ~500 bytes |
@@ -185,7 +185,7 @@ performance. The overhead of binary formats may not be worth it.
 **Example**: E-commerce order data (items, customer info, shipping details)
 
 | Schema Type | Serialization Time | Deserialization Time | Payload Size |
-|-------------|-------------------|---------------------|--------------|
+| ----------- | ------------------ | -------------------- | ------------ |
 | JSON Schema | ~1.5ms | ~2ms | ~45 KB |
 | Avro | ~0.8ms | ~1ms | ~32 KB |
 | Protobuf | ~0.5ms | ~0.7ms | ~28 KB |
@@ -198,7 +198,7 @@ if you're processing thousands of messages per second.
 **Example**: Complex data contract with nested structures, arrays, and metadata
 
 | Schema Type | Serialization Time | Deserialization Time | Payload Size | Memory Usage |
-|-------------|-------------------|---------------------|--------------|--------------|
+| ----------- | ------------------ | -------------------- | ------------ | ------------ |
 | JSON Schema | ~25ms | ~35ms | ~2.5 MB | ~5 MB |
 | Avro | ~12ms | ~18ms | ~1.8 MB | ~3.5 MB |
 | Protobuf | ~8ms | ~12ms | ~1.5 MB | ~3 MB |
@@ -213,7 +213,7 @@ if you're processing thousands of messages per second.
 **Example**: Data warehouse exports, bulk data transfers, analytics datasets
 
 | Schema Type | Serialization Time | Deserialization Time | Payload Size | Throughput |
-|-------------|-------------------|---------------------|--------------|------------|
+| ----------- | ------------------ | -------------------- | ------------ | ---------- |
 | JSON Schema | ~500ms | ~700ms | ~50 MB | ~100 MB/s |
 | Avro | ~200ms | ~300ms | ~35 MB | ~250 MB/s |
 | Protobuf | ~150ms | ~220ms | ~30 MB | ~300 MB/s |

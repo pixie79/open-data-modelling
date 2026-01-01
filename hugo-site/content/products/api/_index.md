@@ -115,8 +115,8 @@ curl -X POST https://api.opendatamodelling.com/v1/contracts \
 For complete API documentation, including all endpoints, request/response formats, and
 authentication details:
 
-- **[Data Modelling API on GitHub →](https://github.com/pixie79/data-modelling-api){:target="_blank" rel="noopener noreferrer"}**
-- **[Data Modelling API on crates.io →](https://crates.io/crates/data-modelling-api){:target="_blank" rel="noopener noreferrer"}** (v1.0.1)
+- **<a href="https://github.com/pixie79/data-modelling-api" target="_blank" rel="noopener noreferrer">Data Modelling API on GitHub →</a>**
+- **<a href="https://crates.io/crates/data-modelling-api" target="_blank" rel="noopener noreferrer">Data Modelling API on crates.io →</a>** (v1.0.1)
 
 ## Screenshot
 
@@ -138,4 +138,4 @@ authentication details:
 ## Support
 
 For issues, questions, or contributions, please visit the
-[GitHub repository](https://github.com/pixie79/data-modelling-api){:target="_blank" rel="noopener noreferrer"}.
+<a href="https://github.com/pixie79/data-modelling-api" target="_blank" rel="noopener noreferrer">GitHub repository</a>.

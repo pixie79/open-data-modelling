@@ -247,19 +247,22 @@ code {
 }
 
 pre {
-  background-color: $bg-secondary;
-  border: 1px solid $border-color;
+  background-color: #1e293b; // Slate 800 - dark background for better contrast
+  color: #e2e8f0; // Slate 200 - light text for readability
+  border: 1px solid #334155; // Slate 700 - darker border
   border-radius: $radius-lg;
   padding: $spacing-lg;
   overflow-x: auto;
   margin-bottom: $spacing-lg;
   line-height: $line-height-relaxed;
+  box-shadow: $shadow-md;
 
   code {
     background: none;
     padding: 0;
     border: none;
     font-size: $font-size-sm;
+    color: inherit; // Inherit light color from pre
   }
 }
 
@@ -427,14 +430,24 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
+  right: auto;
   background-color: $bg-primary;
   list-style: none;
   min-width: 220px;
+  max-width: calc(100vw - 2rem); // Prevent overflow beyond viewport
   box-shadow: $shadow-lg;
   padding: $spacing-sm 0;
   border-radius: $radius-lg;
   border: 1px solid $border-color;
   margin-top: $spacing-xs;
+  z-index: 1000;
+
+  // For menu items near the right edge, align dropdown to the right
+  .nav-menu > li:last-child > &,
+  .nav-menu > li:nth-last-child(2) > & {
+    left: auto;
+    right: 0;
+  }
 
   @media (max-width: $breakpoint-md) {
     position: static;
@@ -442,6 +455,9 @@ header {
     padding-left: $spacing-lg;
     border: none;
     margin-top: 0;
+    max-width: none;
+    right: auto;
+    left: auto;
   }
 
   li:hover > &,

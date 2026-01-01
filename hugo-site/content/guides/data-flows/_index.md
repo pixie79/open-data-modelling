@@ -256,6 +256,6 @@ const isValid = await flow.validate({
 
 - [Crowsfeat Notation](/guides/crowsfeat/) - Data structure notation
 - [Data Contracts](/data-contracts/) - Understanding data contracts
-- [ODCS Documentation](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="_blank" rel="noopener noreferrer"} - Standard format documentation
-- [ODPS Documentation](https://bitol-io.github.io/open-data-product-standard){:target="_blank" rel="noopener noreferrer"} - Open Data Product Standard
+- <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">ODCS Documentation</a> - Standard format documentation
+- <a href="https://bitol-io.github.io/open-data-product-standard" target="_blank" rel="noopener noreferrer">ODPS Documentation</a> - Open Data Product Standard
 ````

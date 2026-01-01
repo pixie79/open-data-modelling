@@ -63,7 +63,7 @@ ODCS incorporates industry best practices for data contract management, helping 
 ## Getting Started with ODCS
 
 1. **Learn the Basics**: Understand data contracts and their benefits
-2. **Review the Standard**: Read the [ODCS documentation](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="_blank" rel="noopener noreferrer"}
+2. **Review the Standard**: Read the <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">ODCS documentation</a>
 3. **Try the Tools**: Use our [SDK](/products/sdk/) or [API](/products/api/) to create contracts
 4. **Implement**: Start using ODCS in your data pipelines
 
@@ -71,4 +71,4 @@ ODCS incorporates industry best practices for data contract management, helping 
 
 - [Data Contracts](/data-contracts/) - Learn about data contracts
 - [Data Schemas](/schemas/) - Understand different schema types
-- [ODCS Documentation](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="_blank" rel="noopener noreferrer"} - Full ODCS specification
+- <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">ODCS Documentation</a> - Full ODCS specification

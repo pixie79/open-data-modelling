@@ -81,7 +81,7 @@ const isValid = validator.validate(userData);
 
 For complete SDK documentation, API reference, and examples, visit the GitHub repository:
 
-**[Data Modelling SDK on GitHub →](https://github.com/pixie79/data-modelling-sdk){:target="_blank" rel="noopener noreferrer"}**
+**<a href="https://github.com/pixie79/data-modelling-sdk" target="_blank" rel="noopener noreferrer">Data Modelling SDK on GitHub →</a>**
 
 ## Screenshot
 
@@ -103,4 +103,4 @@ For complete SDK documentation, API reference, and examples, visit the GitHub re
 ## Support
 
 For issues, questions, or contributions, please visit the
-[GitHub repository](https://github.com/pixie79/data-modelling-sdk){:target="_blank" rel="noopener noreferrer"}.
+<a href="https://github.com/pixie79/data-modelling-sdk" target="_blank" rel="noopener noreferrer">GitHub repository</a>.

@@ -126,6 +126,7 @@ migrations, and ensure compatibility.
 - **Team Overhead**: Minimal training required
 
 **Example**: Updating a JSON Schema to add a new optional field requires:
+
 - Editing the schema file (5 minutes)
 - Updating documentation (15 minutes)
 - Testing validation (30 minutes)
@@ -141,6 +142,7 @@ migrations, and ensure compatibility.
 - **Team Overhead**: Team needs to understand Avro compatibility
 
 **Example**: Adding a new field with default value:
+
 - Schema update (10 minutes)
 - Compatibility verification (20 minutes)
 - Registry update and coordination (30 minutes)
@@ -157,6 +159,7 @@ migrations, and ensure compatibility.
 - **Team Overhead**: Higher learning curve, requires understanding of field numbers and wire format
 
 **Example**: Adding a new field:
+
 - Update `.proto` file (10 minutes)
 - Regenerate code for all languages (30 minutes)
 - Update all services (1-2 hours)
@@ -204,6 +207,7 @@ if you're processing thousands of messages per second.
 | Protobuf | ~8ms | ~12ms | ~1.5 MB | ~3 MB |
 
 **Recommendation**: Binary formats (Avro, Protobuf) provide substantial benefits:
+
 - **30-50% smaller payloads** reduce network bandwidth
 - **2-3x faster** serialization/deserialization
 - **Lower memory footprint** for processing
@@ -219,6 +223,7 @@ if you're processing thousands of messages per second.
 | Protobuf | ~150ms | ~220ms | ~30 MB | ~300 MB/s |
 
 **Recommendation**: Binary formats are essential for large payloads:
+
 - **Protobuf** offers best performance for very large datasets
 - **Avro** provides better schema evolution for changing requirements
 - **JSON Schema** becomes impractical due to parsing overhead
@@ -231,18 +236,21 @@ data processing.
 #### Validation Overhead
 
 **JSON Schema**:
+
 - **CPU**: Medium - requires parsing JSON and applying validation rules
 - **Memory**: Higher - full JSON object must be in memory
 - **Network**: Higher - larger payload sizes
 - **Example**: Validating 10,000 records/second requires ~2 CPU cores
 
 **Avro**:
+
 - **CPU**: Lower - efficient binary parsing
 - **Memory**: Lower - compact binary format
 - **Network**: Lower - smaller payloads
 - **Example**: Validating 10,000 records/second requires ~1 CPU core
 
 **Protobuf**:
+
 - **CPU**: Lowest - highly optimized binary parsing
 - **Memory**: Lowest - minimal memory footprint
 - **Network**: Lowest - smallest payloads
@@ -250,7 +258,7 @@ data processing.
 
 #### Real-World Cost Examples
 
-**Scenario 1: API with 1M requests/day, average payload 5 KB**
+##### Scenario 1: API with 1M requests/day, average payload 5 KB
 
 - **JSON Schema**: ~$50/month (compute) + ~$20/month (bandwidth) = **$70/month**
 - **Avro**: ~$30/month (compute) + ~$12/month (bandwidth) = **$42/month**
@@ -258,7 +266,7 @@ data processing.
 
 **Savings**: Using Protobuf saves **$35/month** (50% reduction)
 
-**Scenario 2: Data pipeline processing 100GB/day, average payload 100 KB**
+##### Scenario 2: Data pipeline processing 100GB/day, average payload 100 KB
 
 - **JSON Schema**: ~$500/month (compute) + ~$200/month (bandwidth) = **$700/month**
 - **Avro**: ~$250/month (compute) + ~$120/month (bandwidth) = **$370/month**
@@ -266,7 +274,7 @@ data processing.
 
 **Savings**: Using Protobuf saves **$400/month** (57% reduction)
 
-**Scenario 3: High-throughput system: 10M messages/day, average payload 2 KB**
+##### Scenario 3: High-throughput system: 10M messages/day, average payload 2 KB
 
 - **JSON Schema**: ~$800/month (compute) + ~$300/month (bandwidth) = **$1,100/month**
 - **Avro**: ~$400/month (compute) + ~$180/month (bandwidth) = **$580/month**
@@ -277,18 +285,21 @@ data processing.
 ### Choosing Based on Costs
 
 **Use JSON Schema when**:
+
 - Payloads are small (< 1 KB)
 - Human readability is important
 - Development speed is prioritized
 - Volume is low (< 100K messages/day)
 
 **Use Avro when**:
+
 - Payloads are medium to large (1 KB - 10 MB)
 - Schema evolution is frequent
 - You need good performance with flexibility
 - Volume is medium to high (100K - 10M messages/day)
 
 **Use Protobuf when**:
+
 - Payloads are large (> 10 KB)
 - Maximum performance is critical
 - Schema changes are infrequent

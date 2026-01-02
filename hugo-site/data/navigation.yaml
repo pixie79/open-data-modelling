@@ -8,28 +8,34 @@ items:
   - title: "ODCS Standard"
     url: "/odcs/"
     weight: 3
+  - title: "ODPS Standard"
+    url: "/odps/"
+    weight: 4
+  - title: "Data Governance"
+    url: "/data-governance/"
+    weight: 5
   - title: "Data Schemas"
     url: "/schemas/"
-    weight: 4
-  - title: "Products"
-    url: "/products/"
-    weight: 5
+    weight: 6
+  - title: "Tools"
+    url: "/tools/"
+    weight: 7
     children:
       - title: "SDK"
-        url: "/products/sdk/"
+        url: "/tools/sdk/"
         weight: 1
       - title: "API"
-        url: "/products/api/"
+        url: "/tools/api/"
         weight: 2
       - title: "OSX App"
-        url: "/products/osx-app/"
+        url: "/tools/osx-app/"
         weight: 3
       - title: "Web App"
-        url: "/products/web-app/"
+        url: "/tools/web-app/"
         weight: 4
   - title: "Guides"
     url: "/guides/"
-    weight: 6
+    weight: 8
     children:
       - title: "Import"
         url: "/guides/import/"
@@ -43,3 +49,6 @@ items:
       - title: "Data Flows"
         url: "/guides/data-flows/"
         weight: 4
+      - title: "Data Modeling Styles"
+        url: "/guides/data-modeling-styles/"
+        weight: 5

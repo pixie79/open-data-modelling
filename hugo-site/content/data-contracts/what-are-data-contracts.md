@@ -1,7 +1,7 @@
 ---
 title: "What Are Data Contracts?"
 description: "A comprehensive introduction to data contracts and their role in modern data systems"
-date: 2025-01-01
+date: 2025-01-02
 draft: false
 weight: 20
 ---
@@ -11,6 +11,10 @@ weight: 20
 Data contracts are formal specifications that define the structure, format, and expectations
 for data exchange between systems. Think of them as API contracts, but for data pipelines and
 data products.
+
+Data Contracts are a set of guidelines that ensure **data consistency, quality and governance** across data pipelines. They help with schema enforcement, data validation, versioning and lineage, providing a robust framework for managing the flow of data across complex data pipelines.
+
+By using these contracts, organizations can ensure that data remains accurate and reliable supporting trustworthy analytics and decision-making. Data contracts follow [OpenAPI](https://www.openapis.org/) and [AsyncAPI](https://www.asyncapi.com/) conventions.
 
 ## Core Concepts
 

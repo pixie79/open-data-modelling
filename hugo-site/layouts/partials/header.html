@@ -18,6 +18,15 @@
             {{ range .children }}
             <li role="none">
               <a href="{{ .url | relURL }}" role="menuitem">{{ .title }}</a>
+              {{ if .children }}
+              <ul class="submenu" role="menu">
+                {{ range .children }}
+                <li role="none">
+                  <a href="{{ .url | relURL }}" role="menuitem">{{ .title }}</a>
+                </li>
+                {{ end }}
+              </ul>
+              {{ end }}
             </li>
             {{ end }}
           </ul>

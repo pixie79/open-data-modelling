@@ -41,18 +41,22 @@ items:
       - title: "Data Schemas"
         url: "/schemas/"
         weight: 2
-      - title: "Import"
-        url: "/guides/import/"
+      - title: "Applications"
+        url: "/guides/"
         weight: 3
-      - title: "Export"
-        url: "/guides/export/"
-        weight: 4
+        children:
+          - title: "Import"
+            url: "/guides/import/"
+            weight: 1
+          - title: "Export"
+            url: "/guides/export/"
+            weight: 2
       - title: "Crowsfeat Notation"
         url: "/guides/crowsfeat/"
-        weight: 5
+        weight: 4
       - title: "Data Flows"
         url: "/guides/data-flows/"
-        weight: 6
+        weight: 5
       - title: "Data Modeling Styles"
         url: "/guides/data-modeling-styles/"
-        weight: 7
+        weight: 6

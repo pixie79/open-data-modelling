@@ -50,8 +50,7 @@ The ODCS framework consists of:
 
 ## Learn More
 
-For complete ODCS documentation and specifications, visit the
-<a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">Open Data Contract Standard Documentation</a> →
+For complete ODCS documentation and specifications, visit the <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">Open Data Contract Standard Documentation</a> →
 
 ## Related Topics
 

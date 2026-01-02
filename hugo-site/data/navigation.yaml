@@ -2,24 +2,22 @@ items:
   - title: "Home"
     url: "/"
     weight: 1
-  - title: "Data Contracts"
-    url: "/data-contracts/"
+  - title: "Standards"
+    url: "/standards/"
     weight: 2
-  - title: "ODCS Standard"
-    url: "/odcs/"
-    weight: 3
-  - title: "ODPS Standard"
-    url: "/odps/"
-    weight: 4
+    children:
+      - title: "ODCS Standard"
+        url: "/odcs/"
+        weight: 1
+      - title: "ODPS Standard"
+        url: "/odps/"
+        weight: 2
   - title: "Data Governance"
     url: "/data-governance/"
-    weight: 5
-  - title: "Data Schemas"
-    url: "/schemas/"
-    weight: 6
+    weight: 3
   - title: "Tools"
     url: "/tools/"
-    weight: 7
+    weight: 4
     children:
       - title: "SDK"
         url: "/tools/sdk/"
@@ -35,20 +33,26 @@ items:
         weight: 4
   - title: "Guides"
     url: "/guides/"
-    weight: 8
+    weight: 5
     children:
+      - title: "Data Contracts"
+        url: "/data-contracts/"
+        weight: 1
+      - title: "Data Schemas"
+        url: "/schemas/"
+        weight: 2
       - title: "Import"
         url: "/guides/import/"
-        weight: 1
+        weight: 3
       - title: "Export"
         url: "/guides/export/"
-        weight: 2
+        weight: 4
       - title: "Crowsfeat Notation"
         url: "/guides/crowsfeat/"
-        weight: 3
+        weight: 5
       - title: "Data Flows"
         url: "/guides/data-flows/"
-        weight: 4
+        weight: 6
       - title: "Data Modeling Styles"
         url: "/guides/data-modeling-styles/"
-        weight: 5
+        weight: 7

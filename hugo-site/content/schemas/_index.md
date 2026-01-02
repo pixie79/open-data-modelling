@@ -99,4 +99,4 @@ As your data needs change, schemas must evolve. Key considerations:
 
 - [Data Contracts](/data-contracts/) - How schemas fit into data contracts
 - [ODCS](/odcs/) - Standardized approach to schema definition
-- [Schema Types Details](/schemas/schema-types/) - In-depth comparison
+- [Schema Types Details](/schemas/schema-types/) - In-depth comparison of schema types and data modeling styles

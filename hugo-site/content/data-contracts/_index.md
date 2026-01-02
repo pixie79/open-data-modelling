@@ -125,5 +125,5 @@ The data contract lifecycle typically involves:
 
 - Learn about the [Open Data Contract Standard (ODCS)](/odcs/) - a comprehensive framework for data contracts
 - Explore different [data schema types](/schemas/) and their benefits
-- Check out our [tools and products](/products/) for working with data contracts
+- Check out our [tools](/tools/) for working with data contracts
 - Read more about [what data contracts are](/data-contracts/what-are-data-contracts/) in detail

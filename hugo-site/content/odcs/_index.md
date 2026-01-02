@@ -8,8 +8,7 @@ weight: 10
 
 ## What is ODCS?
 
-The Open Data Contract Standard (ODCS) is a comprehensive framework for defining, managing,
-and validating data contracts. ODCS provides:
+The Open Data Contract Standard (ODCS) is an open standard maintained by [Bitol](https://bitol.io/) that provides a comprehensive framework for defining, managing, and validating data contracts. ODCS provides:
 
 - **Standardized Format**: A consistent way to define data contracts
 - **Validation Rules**: Built-in validation capabilities
@@ -50,10 +49,12 @@ The ODCS framework consists of:
 
 ## Learn More
 
-For complete ODCS documentation and specifications, visit the <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">Open Data Contract Standard Documentation</a> →
+ODCS is maintained by Bitol as an open standard. For complete ODCS documentation and specifications, visit the <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">Open Data Contract Standard Documentation</a> →
 
 ## Related Topics
 
 - Learn about [data contracts](/data-contracts/) and why they matter
 - Explore different [data schema types](/schemas/)
 - Check out our [ODCS overview](/odcs/odcs-overview/) for more details
+- Learn about [ODPS](/odps/) - Open Data Product Standard
+- Understand [data governance](/data-governance/) best practices

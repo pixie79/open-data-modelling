@@ -79,5 +79,5 @@ Data contracts include versioning information:
 Ready to implement data contracts? Check out:
 
 - The [Open Data Contract Standard (ODCS)](/odcs/) for a comprehensive framework
-- Our [tools and products](/products/) for working with data contracts
+- Our [tools](/tools/) for working with data contracts
 - [Usage guides](/guides/) for practical examples

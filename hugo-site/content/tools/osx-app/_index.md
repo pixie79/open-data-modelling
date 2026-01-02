@@ -85,9 +85,9 @@ For detailed documentation, user guides, and troubleshooting, visit the frontend
 
 ## Related Products
 
-- [Data Modelling SDK](/products/sdk/) - Programmatic access
-- [Data Modelling API](/products/api/) - Server-side service
-- [Web App](/products/web-app/) - Browser-based alternative
+- [Data Modelling SDK](/tools/sdk/) - Programmatic access
+- [Data Modelling API](/tools/api/) - Server-side service
+- [Web App](/tools/web-app/) - Browser-based alternative
 
 ## Support
 

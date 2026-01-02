@@ -96,9 +96,9 @@ For complete SDK documentation, API reference, and examples, visit the GitHub re
 
 ## Related Products
 
-- [Data Modelling API](/products/api/) - Server-side API service
-- [OSX App](/products/osx-app/) - Native macOS application
-- [Web App](/products/web-app/) - Browser-based application
+- [Data Modelling API](/tools/api/) - Server-side API service
+- [OSX App](/tools/osx-app/) - Native macOS application
+- [Web App](/tools/web-app/) - Browser-based application
 
 ## Support
 

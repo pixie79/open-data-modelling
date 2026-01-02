@@ -131,9 +131,9 @@ authentication details:
 
 ## Related Products
 
-- [Data Modelling SDK](/products/sdk/) - Client libraries and tools
-- [OSX App](/products/osx-app/) - Native macOS application
-- [Web App](/products/web-app/) - Browser-based application
+- [Data Modelling SDK](/tools/sdk/) - Client libraries and tools
+- [OSX App](/tools/osx-app/) - Native macOS application
+- [Web App](/tools/web-app/) - Browser-based application
 
 ## Support
 

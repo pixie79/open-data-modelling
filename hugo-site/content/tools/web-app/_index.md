@@ -83,9 +83,9 @@ For detailed documentation, user guides, and API reference, visit the frontend r
 
 ## Related Products
 
-- [Data Modelling SDK](/products/sdk/) - Programmatic access
-- [Data Modelling API](/products/api/) - Server-side service
-- [OSX App](/products/osx-app/) - Native macOS alternative
+- [Data Modelling SDK](/tools/sdk/) - Programmatic access
+- [Data Modelling API](/tools/api/) - Server-side service
+- [OSX App](/tools/osx-app/) - Native macOS alternative
 
 ## Support
 

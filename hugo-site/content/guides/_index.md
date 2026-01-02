@@ -42,6 +42,14 @@ Create visual representations of data movement and transformation.
 
 [Data Flows Guide →](/guides/data-flows/)
 
+### Data Modeling Styles
+
+Comprehensive guide to different data modeling styles including SCD Type 1 & 2, Star/Snowflake
+schemas, Data Vault 2.0, Graph modeling, and modern hybrid architectures for real-time analytics
+and AI/ML.
+
+[Data Modeling Styles Guide →](/guides/data-modeling-styles/)
+
 ## Getting Started
 
 1. **Choose a Guide**: Select the guide that matches your needs
@@ -53,5 +61,5 @@ Create visual representations of data movement and transformation.
 
 - [Data Contracts](/data-contracts/) - Learn about data contracts
 - [ODCS Standard](/odcs/) - Open Data Contract Standard documentation
-- [Products](/products/) - Available tools and applications
+- [Tools](/tools/) - Available tools and applications
 - <a href="https://bitol-io.github.io/open-data-product-standard" target="_blank" rel="noopener noreferrer">Open Data Product Standard</a> - Related standard documentation

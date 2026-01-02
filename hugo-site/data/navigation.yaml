@@ -6,10 +6,10 @@ items:
     url: "/standards/"
     weight: 2
     children:
-      - title: "ODCS Standard"
+      - title: "ODCS"
         url: "/odcs/"
         weight: 1
-      - title: "ODPS Standard"
+      - title: "ODPS"
         url: "/odps/"
         weight: 2
   - title: "Data Governance"

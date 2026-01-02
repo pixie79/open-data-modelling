@@ -11,6 +11,33 @@ Open Data Modelling provides tools, standards, and best practices for creating, 
 
 Open Data Modelling is built on open standards maintained by [Bitol](https://bitol.io/), including the Open Data Contract Standard (ODCS) and Open Data Product Standard (ODPS). These standards provide a foundation for consistent, interoperable data management across organizations and systems.
 
+## What is Open Data Modelling?
+
+Open Data Modelling is a comprehensive platform that helps organizations create, manage, and share data contracts and schemas effectively. We provide both the standards (ODCS and ODPS) and the tools needed to implement data contracts in your organization.
+
+### Why Our Applications Exist
+
+Data contracts are essential for modern data-driven organizations, but creating and managing them can be complex. Our applications exist to:
+
+- **Simplify Data Contract Creation**: Visual interfaces make it easy for both technical and non-technical users to create data contracts without writing code
+- **Ensure Standards Compliance**: Built-in support for ODCS and ODPS ensures your contracts follow industry best practices
+- **Enable Collaboration**: Teams can work together on data contracts, share knowledge, and maintain consistency
+- **Reduce Errors**: Real-time validation catches issues early, preventing costly data quality problems downstream
+- **Accelerate Onboarding**: New team members can understand data structures quickly through well-documented contracts
+
+### Who Should Use Open Data Modelling?
+
+Open Data Modelling is designed for:
+
+- **Data Engineers**: Create and manage data contracts for pipelines and data products
+- **Data Scientists**: Understand data structures and ensure data quality for analytics and ML models
+- **Data Product Managers**: Define and document data products for internal and external consumers
+- **Software Developers**: Integrate data contract validation into applications and APIs
+- **Data Governance Teams**: Establish standards and ensure compliance across the organization
+- **Business Analysts**: Access clear documentation of data structures without needing technical expertise
+
+Whether you're building data pipelines, creating data products, or establishing data governance practices, Open Data Modelling provides the tools and standards you need to succeed.
+
 ## What You'll Find Here
 
 ### Data Contracts

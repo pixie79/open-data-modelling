@@ -47,10 +47,6 @@ The ODCS framework consists of:
 3. **Version Management**: Schema evolution and compatibility
 4. **Tooling Integration**: Support for various data platforms
 
-## Learn More
-
-ODCS is maintained by Bitol as an open standard. For complete ODCS documentation and specifications, visit the <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">Open Data Contract Standard Documentation</a> →
-
 ## Related Topics
 
 - Learn about [data contracts](/data-contracts/) and why they matter

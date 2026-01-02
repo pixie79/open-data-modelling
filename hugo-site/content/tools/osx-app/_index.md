@@ -83,7 +83,7 @@ For detailed documentation, user guides, and troubleshooting, visit the frontend
 - **Developers**: Quick contract prototyping and testing
 - **Teams**: Collaborative contract development
 
-## Related Products
+## Related Tools
 
 - [Data Modelling SDK](/tools/sdk/) - Programmatic access
 - [Data Modelling API](/tools/api/) - Server-side service

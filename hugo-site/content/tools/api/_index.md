@@ -129,7 +129,7 @@ authentication details:
 - **Cloud Applications**: Scalable data contract services
 - **Integration Platforms**: API-first data contract operations
 
-## Related Products
+## Related Tools
 
 - [Data Modelling SDK](/tools/sdk/) - Client libraries and tools
 - [OSX App](/tools/osx-app/) - Native macOS application

@@ -94,7 +94,7 @@ For complete SDK documentation, API reference, and examples, visit the GitHub re
 - **Data Quality Systems**: Implement data quality checks and monitoring
 - **Schema Management**: Programmatically manage large numbers of schemas
 
-## Related Products
+## Related Tools
 
 - [Data Modelling API](/tools/api/) - Server-side API service
 - [OSX App](/tools/osx-app/) - Native macOS application

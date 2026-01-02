@@ -45,7 +45,7 @@ Data products defined with ODPS can include:
 
 ## Learn More
 
-ODPS is maintained by Bitol as an open standard. For complete ODPS documentation and specifications, visit the [Open Data Product Standard Documentation →](https://bitol-io.github.io/open-data-product-standard/latest/#table-of-content){:target="_blank" rel="noopener noreferrer"}
+ODPS is maintained by Bitol as an open standard. For complete ODPS documentation and specifications, visit the <a href="https://bitol-io.github.io/open-data-product-standard/latest/#table-of-content" target="_blank" rel="noopener noreferrer">Open Data Product Standard Documentation →</a>
 
 ## Related Topics
 

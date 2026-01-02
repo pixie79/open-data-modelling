@@ -81,7 +81,7 @@ For detailed documentation, user guides, and API reference, visit the frontend r
 - **Collaboration**: Share contracts with team members
 - **Cross-Platform**: Works on Windows, macOS, Linux, and mobile
 
-## Related Products
+## Related Tools
 
 - [Data Modelling SDK](/tools/sdk/) - Programmatic access
 - [Data Modelling API](/tools/api/) - Server-side service

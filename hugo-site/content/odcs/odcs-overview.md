@@ -69,7 +69,7 @@ ODCS incorporates industry best practices for data contract management, helping 
 
 ## Learn More
 
-ODCS is maintained by Bitol as an open standard. For complete ODCS documentation and specifications, visit the <a href="https://bitol-io.github.io/open-data-contract-standard/latest/" target="_blank" rel="noopener noreferrer">Open Data Contract Standard Documentation →</a>
+ODCS is maintained by Bitol as an open standard. For complete ODCS documentation and specifications, visit the [Open Data Contract Standard Documentation →](https://bitol-io.github.io/open-data-contract-standard/latest/){:target="_blank" rel="noopener noreferrer"}
 
 ## Related Resources
 

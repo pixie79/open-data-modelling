@@ -84,12 +84,12 @@ Our tools and applications provide significant benefits for teams working with d
 - **Collaboration**: Share and collaborate on data contracts with team members
 - **Version Management**: Track changes and manage versions of your data contracts
 - **Export Flexibility**: Export to multiple formats (JSON Schema, Avro, Protobuf, etc.) for use in different systems
-- **Integration**: SDK and API options for integrating data contract functionality into your existing workflows
+- **Integration**: SDK and CLI options for integrating data contract functionality into your existing workflows
 
 ### Available Tools
 
 - **[SDK](/tools/sdk/)** - Integrate data contract functionality into your applications
-- **[API](/tools/api/)** - Server-side service for managing data contracts
+- **[CLI](/tools/cli/)** - Command-line format conversion tool
 - **[OSX App](/tools/osx-app/)** - Native macOS application with a rich graphical interface
 - **[Web App](/tools/web-app/)** - Browser-based application accessible from anywhere
 
@@ -97,7 +97,7 @@ Our tools and applications provide significant benefits for teams working with d
 
 Ready to start using Open Data Modelling? Explore our tools and guides:
 
-- **[Tools](/tools/)** - SDK, API, OSX App, and Web App
+- **[Tools](/tools/)** - SDK, CLI, OSX App, and Web App
 - **[Guides](/guides/)** - Import, export, Crowsfeat notation, Data Flows, and Data Modeling Styles
 
 ## Why Data Contracts Matter

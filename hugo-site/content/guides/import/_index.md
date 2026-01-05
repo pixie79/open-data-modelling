@@ -69,19 +69,11 @@ const contractFromFile = await importer.importFromFile({
 });
 ```
 
-### Using the API
+### Using the CLI
 
 ```bash
-# Import via API
-curl -X POST https://api.opendatamodelling.com/v1/import \
-  -H "Authorization: Bearer $API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "format": "json-schema",
-    "content": "{\"type\": \"object\", ...}",
-    "name": "my-contract",
-    "version": "1.0.0"
-  }'
+# Import via CLI
+data-modelling-cli import --format json-schema --input schema.json --output odcs
 ```
 
 ## Format-Specific Notes

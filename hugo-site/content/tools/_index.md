@@ -18,16 +18,15 @@ models, we have tools to meet your needs.
 ### Data Modelling SDK
 
 A powerful software development kit for integrating data contract functionality into your
-applications. Build custom tools and workflows with our comprehensive API.
+applications. Build custom tools and workflows with our comprehensive SDK.
 
 [Learn more about the SDK →](/tools/sdk/)
 
-### Data Modelling API
+### Data Modelling CLI
 
-A RESTful API service for managing data contracts, schemas, and validations. Perfect for
-server-side applications and microservices architectures.
+Command-line format conversion tool for converting between data contract formats. Perfect for automation, scripting, and batch processing.
 
-[Learn more about the API →](/tools/api/)
+[Learn more about the CLI →](/tools/cli/)
 
 ### OSX App
 

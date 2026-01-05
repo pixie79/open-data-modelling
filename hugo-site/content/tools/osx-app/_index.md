@@ -66,9 +66,12 @@ brew install --cask opendatamodelling
 
 ## Documentation
 
-For detailed documentation, user guides, and troubleshooting, visit the frontend repository:
+**Current Version**: v1.1.0
 
-**<a href="https://github.com/pixie79/data-modelling-frontend" target="_blank" rel="noopener noreferrer">Data Modelling Frontend on GitHub →</a>**
+For detailed documentation, user guides, and release notes, visit the frontend repository:
+
+- **[Frontend v1.1.0 README](https://github.com/pixie79/data-modelling-frontend/tree/release/v1.1.0)** - Release documentation
+- **[Frontend v1.1.0 CHANGELOG](https://github.com/pixie79/data-modelling-frontend/blob/release/v1.1.0/CHANGELOG.md)** - What's new in v1.1.0
 
 ## System Requirements
 
@@ -86,7 +89,7 @@ For detailed documentation, user guides, and troubleshooting, visit the frontend
 ## Related Tools
 
 - [Data Modelling SDK](/tools/sdk/) - Programmatic access
-- [Data Modelling API](/tools/api/) - Server-side service
+- [Data Modelling CLI](/tools/cli/) - Command-line format conversion tool
 - [Web App](/tools/web-app/) - Browser-based alternative
 
 ## Support

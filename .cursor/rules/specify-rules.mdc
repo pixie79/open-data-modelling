@@ -3,6 +3,8 @@
 Auto-generated from all feature plans. Last updated: 2026-01-01
 
 ## Active Technologies
+- Markdown (Hugo content), YAML (navigation/data), TOML (Hugo config), Hugo Extended 0.100+ + Hugo static site generator, Node.js 18+ (for npm scripts), markdownlint, prettier (002-remove-api-docs)
+- N/A (static site generation, content stored in git repository) (002-remove-api-docs)
 
 - Hugo (latest stable, minimum 0.100+), Go templates, Markdown, CSS/SCSS, JavaScript/TypeScript (if needed for interactivity) + Hugo static site generator, Hugo theme (or custom theme), Cloudflare Pages deployment, markdownlint, stylelint, prettier, ESLint (if JS/TS used) (001-odm-docs-site)
 
@@ -22,6 +24,7 @@ npm test && npm run lint
 Hugo (latest stable, minimum 0.100+), Go templates, Markdown, CSS/SCSS, JavaScript/TypeScript (if needed for interactivity): Follow standard conventions
 
 ## Recent Changes
+- 002-remove-api-docs: Added Markdown (Hugo content), YAML (navigation/data), TOML (Hugo config), Hugo Extended 0.100+ + Hugo static site generator, Node.js 18+ (for npm scripts), markdownlint, prettier
 
 - 001-odm-docs-site: Added Hugo (latest stable, minimum 0.100+), Go templates, Markdown, CSS/SCSS, JavaScript/TypeScript (if needed for interactivity) + Hugo static site generator, Hugo theme (or custom theme), Cloudflare Pages deployment, markdownlint, stylelint, prettier, ESLint (if JS/TS used)
 

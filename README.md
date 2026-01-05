@@ -221,7 +221,7 @@ open-data-modelling/
 ## Related Projects
 
 - [Data Modelling SDK](https://github.com/pixie79/data-modelling-sdk) - Software Development Kit
-- [Data Modelling API](https://github.com/pixie79/data-modelling-api) - RESTful API service
+- [Data Modelling API](https://github.com/pixie79/data-modelling-api) - RESTful API service (v2 - coming soon)
 - [Data Modelling Frontend](https://github.com/pixie79/data-modelling-frontend) - OSX App and Web
   App
 

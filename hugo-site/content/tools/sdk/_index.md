@@ -10,7 +10,7 @@ weight: 10
 
 The Open Data Modelling SDK provides a comprehensive toolkit for integrating data contract
 functionality into your applications. Build custom tools, workflows, and integrations with
-our powerful and flexible API.
+our powerful and flexible SDK.
 
 ## Features
 
@@ -79,9 +79,11 @@ const isValid = validator.validate(userData);
 
 ## Documentation
 
+**Current Version**: v1.7.1
+
 For complete SDK documentation, API reference, and examples, visit the GitHub repository:
 
-**<a href="https://github.com/pixie79/data-modelling-sdk" target="_blank" rel="noopener noreferrer">Data Modelling SDK on GitHub →</a>**
+**<a href="https://github.com/pixie79/data-modelling-sdk" target="_blank" rel="noopener noreferrer">Data Modelling SDK on GitHub →</a>** (v1.7.1)
 
 ## Screenshot
 
@@ -96,7 +98,7 @@ For complete SDK documentation, API reference, and examples, visit the GitHub re
 
 ## Related Tools
 
-- [Data Modelling API](/tools/api/) - Server-side API service
+- [Data Modelling CLI](/tools/cli/) - Command-line format conversion tool
 - [OSX App](/tools/osx-app/) - Native macOS application
 - [Web App](/tools/web-app/) - Browser-based application
 

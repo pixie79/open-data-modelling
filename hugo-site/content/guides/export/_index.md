@@ -83,27 +83,14 @@ await exporter.exportToFile({
 });
 ```
 
-### Using the API
+### Using the CLI
 
 ```bash
-# Export via API
-curl -X GET \
-  "https://api.opendatamodelling.com/v1/contracts/contract-123/export?format=json-schema" \
-  -H "Authorization: Bearer $API_KEY" \
-  -o contract-schema.json
+# Export via CLI
+data-modelling-cli export --format json-schema --input contract.odcs --output contract-schema.json
 
 # Export with options
-curl -X POST \
-  "https://api.opendatamodelling.com/v1/contracts/contract-123/export" \
-  -H "Authorization: Bearer $API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "format": "avro",
-    "options": {
-      "namespace": "com.example"
-    }
-  }' \
-  -o contract.avsc
+data-modelling-cli export --format avro --input contract.odcs --output contract.avsc --namespace com.example
 ```
 
 ## Format-Specific Options
